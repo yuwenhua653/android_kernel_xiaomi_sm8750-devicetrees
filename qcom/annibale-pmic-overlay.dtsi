@@ -89,6 +89,7 @@
 };
 
 &pmih010x_haptics {
+	compatible = "xiaomi,annibale-haptics", "qcom,hv-haptics";
 	nvmem-names = "hap_cfg_sdam";
 	nvmem = <&pmk8550_sdam_46>;
 };

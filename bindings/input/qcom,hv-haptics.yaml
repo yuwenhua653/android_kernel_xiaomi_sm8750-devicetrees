@@ -21,10 +21,14 @@ description: |
 
 properties:
   compatible:
-    enum:
-      - qcom,hv-haptics
-      - qcom,pm8350b-haptics
-      - qcom,pm5100-haptics
+    oneOf:
+      - enum:
+          - qcom,hv-haptics
+          - qcom,pm8350b-haptics
+          - qcom,pm5100-haptics
+      - items:
+          - const: xiaomi,annibale-haptics
+          - const: qcom,hv-haptics
 
   reg:
     minItems: 2

@@ -89,8 +89,8 @@
       "source_path": "qcom/sun-pmic-overlay.dtsi",
       "source_repository": "LineageOS/android_kernel_qcom_sm8750-devicetrees",
       "source_commit": "450710a3aac3af54ef46504df2d46afecd6aa0eb",
-      "integration": "Annibale-scoped composition with reviewed MiCode differences",
-      "imported_sha256": "6e53d57bfbb2475f75fe06ee57931d087ba0185895d511a2e39ed4285f012c41"
+      "integration": "Annibale-scoped composition with reviewed MiCode differences; add xiaomi,annibale-haptics before the existing qcom,hv-haptics fallback to opt into board-specific HAL controls (see annibale-haptics.md)",
+      "imported_sha256": "f6a2dc735bfb81177f023bc142f791df9c4f22808627ecc5f8146121821c9efb"
     },
     {
       "path": "qcom/annibale-thermal-overlay.dtsi",
