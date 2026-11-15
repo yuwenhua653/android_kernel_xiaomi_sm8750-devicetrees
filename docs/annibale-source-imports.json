@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "notes": "Integration adjustments and new compat-node provenance are documented in annibale-import.md. Display provenance is in annibale-display-import.md. Hashes describe this source import, not compiled image compatibility.",
+  "imports": [
+    {
+      "path": "qcom/annibale-sm8750-overlay.dts",
+      "source_path": "qcom/annibale-sm8750-overlay.dts",
+      "source_repository": "MiCode/kernel_devicetree",
+      "source_commit": "32fd4ddcedd46baa579643b3894c37c0fccccb91",
+      "upstream_sha256": "02d8cfe7feb4117db9ea8e6f698b93692275bbea774b53b4be99f6c2e4829ee9",
+      "imported_sha256": "e90399e6e7e10ed97f6df527493ff83bdcbdb2ed265db0ce5ebbd2e7bff9ade3",
+      "normalization": "Whitespace only: remove spaces before indentation tabs or extra final blank line; preserve all DT values."
+    },
+    {
+      "path": "qcom/annibale-sm8750.dtsi",
+      "source_path": "qcom/annibale-sm8750.dtsi",
+      "source_repository": "MiCode/kernel_devicetree",
+      "source_commit": "32fd4ddcedd46baa579643b3894c37c0fccccb91",
+      "upstream_sha256": "83bd51dc08b5747bc4f573018f95437ffc9285f39b0215ae182e70f62c8a737e",
+      "imported_sha256": "b8a704cd830286c74256eccbc6f419d32de4aa294dd160df72ad0763733b487e"
+    },
+    {
+      "path": "qcom/sm8750-xiaomi-common.dtsi",
+      "source_path": "qcom/sm8750-xiaomi-common.dtsi",
+      "source_repository": "MiCode/kernel_devicetree",
+      "source_commit": "32fd4ddcedd46baa579643b3894c37c0fccccb91",
+      "upstream_sha256": "7ab7a528f2dec657c30c0990fe84b5786b748124a24057ea05f70e70d0eb164b",
+      "imported_sha256": "e6b92472e41891870731bbc64637bbe787ee731d1516ce600ae4d5c823858256"
+    },
+    {
+      "path": "qcom/annibale-charger-common.dtsi",
+      "source_path": "qcom/annibale-charger-common.dtsi",
+      "source_repository": "MiCode/kernel_devicetree",
+      "source_commit": "32fd4ddcedd46baa579643b3894c37c0fccccb91",
+      "upstream_sha256": "5868463cbe85f69b03dbfcc2890a555f4e79c5001179732a663dd3b7f2ad0bf9",
+      "imported_sha256": "954d417c9458225109a474b72ec9a31e21b8066714bcf3b2ea8c50afdc4f4241",
+      "normalization": "Whitespace only: remove spaces before indentation tabs or extra final blank line; preserve all DT values."
+    },
+    {
+      "path": "qcom/mca.dtsi",
+      "source_path": "qcom/mca.dtsi",
+      "source_repository": "MiCode/kernel_devicetree",
+      "source_commit": "32fd4ddcedd46baa579643b3894c37c0fccccb91",
+      "upstream_sha256": "4042c321ac978ffc72244b26dc5a8dd340f99dda55c980530d4fdda7063334f5",
+      "imported_sha256": "0cfd0193390a5a35ecce6ff7f6e484505a4cd83ae1bd2c6427affadfd2eef4be"
+    },
+    {
+      "path": "qcom/annibale-nfc-pinctrl.dtsi",
+      "source_path": "qcom/annibale-nfc-pinctrl.dtsi",
+      "source_repository": "MiCode/kernel_devicetree",
+      "source_commit": "32fd4ddcedd46baa579643b3894c37c0fccccb91",
+      "upstream_sha256": "823fbc85ec87d1ae80aa26bffeb7999a29c66cad8bf1fd6d7ae7195739918910",
+      "imported_sha256": "823fbc85ec87d1ae80aa26bffeb7999a29c66cad8bf1fd6d7ae7195739918910"
+    },
+    {
+      "path": "qcom/sm8750-ir-sensor-common.dtsi",
+      "source_path": "qcom/sm8750-ir-sensor-common.dtsi",
+      "source_repository": "MiCode/kernel_devicetree",
+      "source_commit": "32fd4ddcedd46baa579643b3894c37c0fccccb91",
+      "upstream_sha256": "cd004b50310f45a13163c203f16fd31e37d7dc841fa95c84608df730e77c4165",
+      "imported_sha256": "cd004b50310f45a13163c203f16fd31e37d7dc841fa95c84608df730e77c4165"
+    },
+    {
+      "path": "qcom/camera/annibale-sm8750-camera-sensor.dts",
+      "source_path": "annibale-sm8750-camera-sensor.dts",
+      "source_repository": "MiCode/vendor_qcom_proprietary_camera-devicetree",
+      "source_commit": "4900e29d927aaca00f52fc51e07055197ca72569",
+      "upstream_sha256": "c32d667d715ba5e021c37ca34148167ac05cbe107edd8816a75ea76dc28225d6",
+      "imported_sha256": "c32d667d715ba5e021c37ca34148167ac05cbe107edd8816a75ea76dc28225d6"
+    },
+    {
+      "path": "qcom/camera/annibale-sm8750-camera-sensor.dtsi",
+      "source_path": "annibale-sm8750-camera-sensor.dtsi",
+      "source_repository": "MiCode/vendor_qcom_proprietary_camera-devicetree",
+      "source_commit": "4900e29d927aaca00f52fc51e07055197ca72569",
+      "upstream_sha256": "15f5c1e3490c54f4961f016a3503ff39e4029325e9325683f11e3ea5c4630d3c",
+      "imported_sha256": "e767eaf5686511750859a1e1ffc6e440288ab77d67e60a1a66f112e58a091da8"
+    },
+    {
+      "path": "qcom/annibale-mtp.dtsi",
+      "source_path": "qcom/sun-mtp.dtsi",
+      "source_repository": "LineageOS/android_kernel_qcom_sm8750-devicetrees",
+      "source_commit": "450710a3aac3af54ef46504df2d46afecd6aa0eb",
+      "integration": "Annibale-scoped composition with reviewed MiCode differences",
+      "imported_sha256": "306721a95ee96d10df0bf02008a671689f73c4f7ec281aded51ed54b7d80666f"
+    },
+    {
+      "path": "qcom/annibale-pmic-overlay.dtsi",
+      "source_path": "qcom/sun-pmic-overlay.dtsi",
+      "source_repository": "LineageOS/android_kernel_qcom_sm8750-devicetrees",
+      "source_commit": "450710a3aac3af54ef46504df2d46afecd6aa0eb",
+      "integration": "Annibale-scoped composition with reviewed MiCode differences",
+      "imported_sha256": "6e53d57bfbb2475f75fe06ee57931d087ba0185895d511a2e39ed4285f012c41"
+    },
+    {
+      "path": "qcom/annibale-thermal-overlay.dtsi",
+      "source_path": "qcom/sun-thermal-overlay.dtsi",
+      "source_repository": "LineageOS/android_kernel_qcom_sm8750-devicetrees",
+      "source_commit": "450710a3aac3af54ef46504df2d46afecd6aa0eb",
+      "integration": "Annibale-scoped composition with reviewed MiCode differences",
+      "imported_sha256": "996f94b40f26965e93cae37440f9cf432402ce180bc2ee3ed7ddb3310c1c24e6"
+    }
+  ]
+}

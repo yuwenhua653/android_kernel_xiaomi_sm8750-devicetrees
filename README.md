@@ -7,13 +7,16 @@ Redmi K90 (`annibale`) OSS 内核的 DTB/DTBO 源码工作仓库。
 - 开发分支：`annibale`。
 - 源码目录：`kernel/xiaomi/sm8750-devicetrees`。
 
-当前仍为 LOS 通用基线，尚未导入 Annibale DTS 或启用对应构建目标。
-现有跨仓库引用使用 `../sm8750-modules`，可保留在 `kernel/xiaomi/`
-下的兄弟目录布局。Qualcomm 节点、compatible 和目录名保留。
+第一批 Annibale 板级移植已加入 SoC、PMIC/热管理、充电描述、触摸、红外、
+NFC、相机及 P11 显示专属 DTS，并接入对应构建列表。LOS 公共 Qualcomm
+DTS 保留，参考板冲突通过 Annibale 专属组合处理。
 
-初步依赖审查显示，移植 MiCode Annibale overlay 还需正确迁移
-`mca_adsp_glink`、`usb_nop_phy` 及 USB PHY 宏头文件依赖，不能只复制
-板级 DTS。完整外设 DTBO 组成及真机功能尚未验证。
+现有跨仓库引用使用 `../sm8750-modules`，保留 `kernel/xiaomi/` 下的
+兄弟目录布局。Qualcomm 节点、compatible 和目录名保留。
 
-仓库组合、同步方式及适配状态见
+来源和检查说明见 [Annibale 移植记录](docs/annibale-import.md)。
+DT 编译及合并通过只验证设备树结构；MCA/HWID 等驱动尚有缺口，完整外设
+模块、最终镜像和真机功能仍未验证。
+
+仓库组合、同步方式及总体状态见
 [README.annibale.md](https://github.com/yuwenhua653/android_kernel_xiaomi_sm8750/blob/annibale/README.annibale.md)。

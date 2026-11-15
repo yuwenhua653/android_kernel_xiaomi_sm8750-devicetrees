@@ -1,5 +1,6 @@
 ifneq ($(CONFIG_ARCH_QTI_VM), y)
 dtbo-$(CONFIG_ARCH_SUN) += display/sun-sde.dtbo \
+		display/annibale-sde-display-mtp-overlay.dtbo \
 		display/sun-sde-display-cdp-overlay.dtbo \
 		display/sun-sde-display-mtp-overlay.dtbo \
 		display/sun-sde-display-rumi-overlay.dtbo \
