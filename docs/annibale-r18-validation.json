@@ -1,0 +1,543 @@
+{
+  "status": "passed",
+  "compositions": [
+    {
+      "base": "sun",
+      "family": "tfa",
+      "gpu_overlay": "sun-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-0",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ],
+      "sha256": "4c42fffdcf88af5205d5c867f7e882d8c6ed7a9bc9e3bb87f6bbd2f006be8f49"
+    },
+    {
+      "base": "sun",
+      "family": "sia",
+      "gpu_overlay": "sun-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-0",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ],
+      "sha256": "1d9fbbafd12c35c41c66550104a997ad2283cf2872fd578593d167a7ca73c995"
+    },
+    {
+      "base": "sun-v2",
+      "family": "tfa",
+      "gpu_overlay": "sun-v2-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-1",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ],
+      "sha256": "062b073d2d886f5aa28f9ade52802b41883ce454957b7b5415840fcfb96bb7ca"
+    },
+    {
+      "base": "sun-v2",
+      "family": "sia",
+      "gpu_overlay": "sun-v2-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-1",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ],
+      "sha256": "6084cb29c18d79194826f73c2ae93990f6374accfb3a3f8b9a93b95ed58495b6"
+    },
+    {
+      "base": "sun-tp",
+      "family": "tfa",
+      "gpu_overlay": "sun-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-0",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ],
+      "sha256": "2b0265516ce54ab859f78f0d3a201ec52ad57d6e80cfe278795eae660224be32"
+    },
+    {
+      "base": "sun-tp",
+      "family": "sia",
+      "gpu_overlay": "sun-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-0",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ],
+      "sha256": "c055ad10b98770399769cbf55ad1be4a8f117c60f191eb88cecda640167f3417"
+    },
+    {
+      "base": "sun-tp-v2",
+      "family": "tfa",
+      "gpu_overlay": "sun-v2-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-1",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ],
+      "sha256": "02a37ff2a7cd7b8bc916bff5a147caccaadfdf59d5e87cae2f5a2a8193c63a69"
+    },
+    {
+      "base": "sun-tp-v2",
+      "family": "sia",
+      "gpu_overlay": "sun-v2-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-1",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ],
+      "sha256": "7408ad4629bbe38dce3ea32cbae43c67b14c3caa01d9b2142e764ba342610e23"
+    },
+    {
+      "base": "sunp",
+      "family": "tfa",
+      "gpu_overlay": "sun-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-0",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ],
+      "sha256": "64de285ca8abc89d625a08ba651447c240a6292d7d3b9241498f06eed33781e9"
+    },
+    {
+      "base": "sunp",
+      "family": "sia",
+      "gpu_overlay": "sun-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-0",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ],
+      "sha256": "2de83f411aa3a189b521b2aebf8deb194fbf43fa86c223895272ba372654961f"
+    },
+    {
+      "base": "sunp-v2",
+      "family": "tfa",
+      "gpu_overlay": "sun-v2-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-1",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ],
+      "sha256": "a2908cd28e97d860420f3ded3953bcb5bc2638d12450d93a5e958aa7ddb2eaa1"
+    },
+    {
+      "base": "sunp-v2",
+      "family": "sia",
+      "gpu_overlay": "sun-v2-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-1",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ],
+      "sha256": "aee2c137a7041716f0f11695d7339b8f0d0a6c6933f0fcc0ad1ab14ec02c9e91"
+    },
+    {
+      "base": "sunp-tp",
+      "family": "tfa",
+      "gpu_overlay": "sun-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-0",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ],
+      "sha256": "214d32464e07303a7889989d370f690e817cb19a0685b8abdd4c03d43cdf5832"
+    },
+    {
+      "base": "sunp-tp",
+      "family": "sia",
+      "gpu_overlay": "sun-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-0",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ],
+      "sha256": "06c2d94370a3f2f2d14093f988213eb165f2e5e4c4bcf41a92941cae4cb349e4"
+    },
+    {
+      "base": "sunp-tp-v2",
+      "family": "tfa",
+      "gpu_overlay": "sun-v2-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-1",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ],
+      "sha256": "24d4b2a70dedee6183bc3be55d4ae3ae65d9ceabfe44b83b6d2a8b1baee6b6ee"
+    },
+    {
+      "base": "sunp-tp-v2",
+      "family": "sia",
+      "gpu_overlay": "sun-v2-gpu",
+      "touch_node": "/soc/qcom,qupv3_1_geni_se@ac0000/spi@a88000/goodix@0",
+      "panel_candidates": [
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_02_0b_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p00_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_p11_42_0d_0a_p10_dsc_cmd",
+        "/soc/qcom,mdss_mdp@ae00000/qcom,mdss_dsi_nt37801_wqhd_plus_vid"
+      ],
+      "gpu_compatible": [
+        "qcom,adreno-gpu-gen8-0-1",
+        "qcom,kgsl-3d0"
+      ],
+      "ufs_phy_compatible": [
+        "qcom,ufs-phy-qmp-v4-sun"
+      ],
+      "camera_nodes_preserved": [
+        "/soc/qcom,cci0@ac7b000/qcom,cam-sensor0",
+        "/soc/qcom,cci1@ac7c000/qcom,cam-sensor3",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@880000/qcom,cam-sensor2",
+        "/soc/qcom,qupv3_2_geni_se@8c0000/i2c@884000/qcom,cam-sensor1"
+      ],
+      "audio_codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ],
+      "sha256": "ca42f2fe40ace50615a96e0ad86476968fdc76ef6c9d1ef4e612a7c185c44b81"
+    }
+  ],
+  "dtc_warning_counts": {
+    "annibale-sde-display-mtp-overlay.warnings": 187,
+    "annibale-sm8750-camera-sensor.warnings": 26,
+    "audio/annibale-audio-sia-test.warnings": 14,
+    "audio/annibale-audio-tfa-test.warnings": 14,
+    "audio/annibale-sm8750-overlay.warnings": 99,
+    "audio/sun-audio.warnings": 33,
+    "audio/sun-tp-v2.warnings": 239,
+    "audio/sun-tp.warnings": 239,
+    "audio/sun-v2.warnings": 239,
+    "audio/sun.warnings": 239,
+    "audio/sunp-tp-v2.warnings": 239,
+    "audio/sunp-tp.warnings": 239,
+    "audio/sunp-v2.warnings": 239,
+    "audio/sunp.warnings": 239,
+    "sun-camera.warnings": 20,
+    "sun-gpu.warnings": 19,
+    "sun-v2-gpu.warnings": 19
+  },
+  "flashable": false,
+  "boot_verified": false,
+  "scope": "Eight bases x two audio families, followed by common/Annibale camera, P11 display and matching GPU overlay. Selected binding checks only; not complete DT schema, GPIO conflicts, bootloader table or hardware validation.",
+  "round": "R18",
+  "module_plans": {
+    "tfa": 186,
+    "sia": 187
+  },
+  "negative_cases": [
+    {
+      "case": "wrong-audio-family",
+      "rejected": "audio family overwritten"
+    },
+    {
+      "case": "disabled-gpu",
+      "rejected": "GPU is disabled"
+    },
+    {
+      "case": "broken-touch-panels",
+      "rejected": "touch panel references changed"
+    }
+  ],
+  "validator_sha256": "ef183b1aa12f1d5d970a658d90153ce72163adf7ed257a27f40c9412db6bdf0a"
+}
