@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/* Apply after annibale-sde-display-mtp-overlay; source-driver qualification only.
+ * Keep panel selection unchanged. PA and the NT37801 fallback have no PB quirk.
+ */
+/dts-v1/;
+/plugin/;
+
+&dsi_p11_42_0d_0a_dsc_cmd {
+	xiaomi,annibale-pb-quirks;
+};
+&dsi_p11_42_0d_0a_p00_dsc_cmd {
+	xiaomi,annibale-pb-quirks;
+};
+&dsi_p11_42_0d_0a_p10_dsc_cmd {
+	xiaomi,annibale-pb-quirks;
+};

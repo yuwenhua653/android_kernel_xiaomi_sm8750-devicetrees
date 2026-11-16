@@ -20,13 +20,27 @@ def strings(value):
     return value.rstrip(b'\0').decode().split('\0')
 
 
-def check(tree, family, camera_before):
+def check(tree, family, camera_before, native_display=False):
     nodes = tree.nodes
     ph = {cells(p['phandle'])[0]: n for n, p in nodes.items() if 'phandle' in p}
     panel_labels = ['dsi_p11_42_0d_0a_dsc_cmd', 'dsi_p11_42_02_0b_dsc_cmd',
                     'dsi_p11_42_0d_0a_p00_dsc_cmd', 'dsi_p11_42_0d_0a_p10_dsc_cmd',
                     'dsi_nt37801_amoled_video']
     expected_panels = [tree.symbol(n) for n in panel_labels]
+    pb_panels = [expected_panels[i] for i in (0, 2, 3)]
+    gated = [n for n, p in nodes.items() if 'xiaomi,annibale-pb-quirks' in p]
+    require(set(gated) == (set(pb_panels) if native_display else set()),
+            'PB quirks must be opt-in and confined to the three P11 PB candidates')
+    for panel in pb_panels:
+        prop = nodes[panel]
+        require(cells(prop['mi,panel-id']) == [0x00503131, 0x50420d0a], 'wrong PB panel id')
+        require(prop['mi,panel-build-id-read-needed'] == b'', 'missing PB build id gate')
+        require(cells(prop['mi,panel-build-id-read-length']) == [1], 'wrong PB read length')
+        require(prop['mi,mdss-dsi-panel-build-id-read-command'] == bytes.fromhex('06 01 00 01 00 00 01 da'),
+                'wrong PB read command')
+        require(prop['mi,mdss-dsi-panel-build-id-read-command-state'] == b'dsi_hs_mode\0',
+                'wrong PB read state')
+        require(cells(prop['qcom,mdss-dsi-bl-max-level']) == [16383], 'PB brightness range changed')
     touch = [(n, p) for n, p in nodes.items() if b'xiaomi,touch-spi' in p.get('compatible', b'').split(b'\0')]
     require(len(touch) == 1, 'expected one Goodix node')
     require([ph[n] for n in cells(touch[0][1]['panel'])] == expected_panels, 'touch panel references changed')
@@ -80,6 +94,7 @@ def main():
                     '--output', str(audio)], check=True)
     sources = ['camera/sun-camera', 'camera/annibale-sm8750-camera-sensor',
                'display/display/annibale-sde-display-mtp-overlay',
+               'display/display/annibale-native-panel-test',
                'graphics/gpu/sun-gpu', 'graphics/gpu/sun-v2-gpu']
     for source in sources:
         name = source.split('/')[-1]
@@ -104,12 +119,27 @@ def main():
             subprocess.run([str(args.fdtoverlay), '-i', str(camera), '-o', str(result),
                             str(out / 'annibale-sde-display-mtp-overlay.dtb'), str(out / (gpu + '.dtb'))], check=True)
             evidence = check(Fdt(result.read_bytes()), family, Fdt(camera.read_bytes()))
-            rows.append({'base': base, 'family': family, 'gpu_overlay': gpu, **evidence,
+            rows.append({'base': base, 'family': family, 'display_mode': 'default',
+                         'gpu_overlay': gpu, **evidence,
                          'sha256': hashlib.sha256(result.read_bytes()).hexdigest()})
+            native = out / f'{base}-{family}-interactive-native.dtb'
+            subprocess.run([str(args.fdtoverlay), '-i', str(result), '-o', str(native),
+                            str(out / 'annibale-native-panel-test.dtb')], check=True)
+            evidence = check(Fdt(native.read_bytes()), family, Fdt(camera.read_bytes()), native_display=True)
+            original, modified = Fdt(result.read_bytes()), Fdt(native.read_bytes())
+            for name, properties in modified.nodes.items():
+                require(name in original.nodes, 'native overlay added a node')
+                expected = dict(properties)
+                expected.pop('xiaomi,annibale-pb-quirks', None)
+                require(expected == original.nodes[name], 'native overlay changed existing properties')
+            require(set(original.nodes) == set(modified.nodes), 'native overlay removed a node')
+            rows.append({'base': base, 'family': family, 'display_mode': 'native',
+                         'gpu_overlay': gpu, **evidence,
+                         'sha256': hashlib.sha256(native.read_bytes()).hexdigest()})
     warnings = {str(p.relative_to(out)): p.read_text().count('Warning (') for p in sorted(out.rglob('*.warnings'))}
     report = {'status': 'passed', 'compositions': rows, 'dtc_warning_counts': warnings,
               'flashable': False, 'boot_verified': False,
-              'scope': 'Eight bases x two audio families, followed by common/Annibale camera, P11 display and matching GPU overlay. Selected binding checks only; not complete DT schema, GPIO conflicts, bootloader table or hardware validation.'}
+              'scope': 'Eight bases x two audio families x default/native display, followed by common/Annibale camera, P11 display and matching GPU overlay. Selected binding checks only; not complete DT schema, GPIO conflicts, bootloader table or hardware validation.'}
     (out / 'validation.json').write_text(json.dumps(report, indent=2) + '\n')
     print(f'PASS: {len(rows)} interactive compositions; NOT boot-qualified')
 

@@ -69,6 +69,20 @@ dtbo-$(CONFIG_ARCH_TUNA) += display/trustedvm-kera-sde-display-atp-overlay.dtbo 
 		display/trustedvm-kera-sde-display-rcm-overlay.dtbo
 endif
 
+# Explicit source-driver experiment. This does not create a bootloader DTBO table.
+ifneq ($(strip $(ANNIBALE_DISPLAY_MODE)),)
+ifneq ($(ANNIBALE_DISPLAY_MODE),native)
+$(error ANNIBALE_DISPLAY_MODE must be empty or native)
+endif
+ifneq ($(CONFIG_ARCH_SUN),y)
+$(error ANNIBALE_DISPLAY_MODE=native requires CONFIG_ARCH_SUN=y)
+endif
+ifeq ($(CONFIG_ARCH_QTI_VM),y)
+$(error ANNIBALE_DISPLAY_MODE=native is not supported in a trusted VM)
+endif
+dtbo-y += display/annibale-native-panel-test.dtbo
+endif
+
 always-y    := $(dtb-y) $(dtbo-y)
 subdir-y    := $(dts-dirs)
 clean-files    := *.dtb *.dtbo
