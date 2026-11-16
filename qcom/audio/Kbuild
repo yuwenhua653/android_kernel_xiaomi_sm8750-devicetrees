@@ -61,6 +61,17 @@ dtbo-y += kera-audio.dtbo \
 
 endif
 
+# Compile only one explicitly selected qualification candidate; never default-on.
+ifneq ($(ANNIBALE_AUDIO_VARIANT),)
+ifeq ($(filter $(ANNIBALE_AUDIO_VARIANT),tfa sia),)
+$(error ANNIBALE_AUDIO_VARIANT must be tfa or sia)
+endif
+ifneq ($(words $(ANNIBALE_AUDIO_VARIANT)),1)
+$(error select exactly one ANNIBALE_AUDIO_VARIANT)
+endif
+dtbo-$(CONFIG_ARCH_SUN) += annibale-audio-$(ANNIBALE_AUDIO_VARIANT)-test.dtbo
+endif
+
  always-y    := $(dtb-y) $(dtbo-y)
  subdir-y    := $(dts-dirs)
  clean-files    := *.dtb *.dtbo

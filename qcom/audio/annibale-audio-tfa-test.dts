@@ -1,0 +1,195 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/* Annibale opt-in audio candidate: wiring reconstructed from OS4.0.6.0.XPKCNXM.
+ * This is not a MiCode audio DT source release or a validated bootloader image.
+ * Select exactly one codec family after hardware identification.
+ */
+/dts-v1/;
+/plugin/;
+#include "sun-audio-overlay.dtsi"
+
+&sun_snd {
+ qcom,tdm-max-slots = <0x2>;
+ qcom,tdm-clk-attribute = <0x4 0x4 0x4 0x4 0x4 0x4 0x4 0x4>;
+ qcom,ext-disp-audio-rx = <0x0>;
+ qcom,audio-routing = "TX DMIC0", "Digital Mic0", "TX DMIC1", "Digital Mic1", "TX DMIC2", "Digital Mic2", "TX DMIC3", "Digital Mic3", "TX DMIC4", "Digital Mic4", "TX DMIC5", "Digital Mic5", "HAP_IN", "WSA2_HAPT OUT", "RX_TX DEC0_INP", "TX DEC0 MUX", "RX_TX DEC1_INP", "TX DEC1 MUX", "RX_TX DEC2_INP", "TX DEC2 MUX", "RX_TX DEC3_INP", "TX DEC3 MUX", "VA SWR_INPUT", "VA_SWR_CLK", "VA_AIF1 CAP", "VA_SWR_CLK", "VA_AIF2 CAP", "VA_SWR_CLK", "VA_AIF3 CAP", "VA_SWR_CLK", "VA DMIC0", "Digital Mic0", "VA DMIC1", "Digital Mic1", "VA DMIC2", "Digital Mic2", "VA DMIC3", "Digital Mic3", "VA DMIC4", "Digital Mic4", "VA DMIC5", "Digital Mic5";
+ qcom,model = "sun-mtp-snd-card";
+ qcom,wcd-disabled = <1>;
+ qcom,wsa-max-devs = <0>;
+ qcom,tdm-audio-intf = <1>;
+ qcom,msm-mbhc-usbc-audio-supported = <0>;
+ asoc-codec-names = "msm-stub-codec.1", "lpass-cdc", "wcd939x_codec", "swr-haptics";
+ asoc-codec = <&stub_codec>, <&lpass_cdc>, <&wcd939x_codec>, <&swr_haptics>;
+ qcom,sec-mi2s-gpios = <&annibale_cdc_sec_tdm_gpios>;
+ xiaomi,smartpa-codecs = <&annibale_tfa98xx_1_36>, <&annibale_tfa98xx_2_34>;
+};
+&wsa884x_0220 { status = "disabled"; };
+&wsa884x_0221 { status = "disabled"; };
+&wsa884x_2_0220 { status = "disabled"; };
+&wsa884x_2_0221 { status = "disabled"; };
+&spf_core_platform {
+	annibale_cdc_sec_tdm_gpios: sec_tdm_pinctrl {
+		#gpio-cells = <0>;
+		pinctrl-1 = <&annibale_tdm1_clk_sleep &annibale_tdm1_ws_sleep &annibale_tdm1_din_sleep &annibale_tdm1_dout_sleep>;
+		pinctrl-0 = <&annibale_tdm1_clk_active &annibale_tdm1_ws_active &annibale_tdm1_din_active &annibale_tdm1_dout_active>;
+		pinctrl-names = "aud_active", "aud_sleep";
+		compatible = "qcom,msm-cdc-pinctrl";
+		status = "ok";
+	};
+};
+&tlmm {
+	annibale_tdm1_clk_sleep: tdm1_clk_sleep {
+		mux {
+			function = "gpio";
+			pins = "gpio121";
+		};
+		config {
+			input-enable;
+			bias-pull-down;
+			drive-strength = <0x2>;
+			pins = "gpio121";
+		};
+	};
+	annibale_tdm1_clk_active: tdm1_clk_active {
+		mux {
+			function = "i2s1_sck";
+			pins = "gpio121";
+		};
+		config {
+			output-high;
+			bias-disable;
+			drive-strength = <0x8>;
+			pins = "gpio121";
+		};
+	};
+	annibale_tdm1_ws_sleep: tdm1_ws_sleep {
+		mux {
+			function = "gpio";
+			pins = "gpio123";
+		};
+		config {
+			input-enable;
+			bias-pull-down;
+			drive-strength = <0x2>;
+			pins = "gpio123";
+		};
+	};
+	annibale_tdm1_ws_active: tdm1_ws_active {
+		mux {
+			function = "i2s1_ws";
+			pins = "gpio123";
+		};
+		config {
+			output-high;
+			bias-disable;
+			drive-strength = <0x6>;
+			pins = "gpio123";
+		};
+	};
+	annibale_tdm1_din_sleep: tdm1_din_sleep {
+		mux {
+			function = "gpio";
+			pins = "gpio122";
+		};
+		config {
+			input-enable;
+			bias-pull-down;
+			drive-strength = <0x2>;
+			pins = "gpio122";
+		};
+	};
+	annibale_tdm1_din_active: tdm1_din_active {
+		mux {
+			function = "i2s1_data0";
+			pins = "gpio122";
+		};
+		config {
+			bias-disable;
+			drive-strength = <0x8>;
+			pins = "gpio122";
+		};
+	};
+	annibale_tdm1_dout_sleep: tdm1_dout_sleep {
+		mux {
+			function = "gpio";
+			pins = "gpio124";
+		};
+		config {
+			input-enable;
+			bias-pull-down;
+			drive-strength = <0x2>;
+			pins = "gpio124";
+		};
+	};
+	annibale_tdm1_dout_active: tdm1_dout_active {
+		mux {
+			function = "i2s1_data1";
+			pins = "gpio124";
+		};
+		config {
+			bias-pull-down;
+			drive-strength = <0x8>;
+			pins = "gpio124";
+		};
+	};
+	annibale_rcv_gpio_high: rcv_gpio_high {
+		mux {
+			function = "gpio";
+			pins = "gpio67";
+		};
+		config {
+			output-high;
+			bias-pull-up;
+			drive-strength = <0x2>;
+			pins = "gpio67";
+		};
+	};
+	annibale_rcv_gpio_low: rcv_gpio_low {
+		mux {
+			function = "gpio";
+			pins = "gpio67";
+		};
+		config {
+			output-low;
+			bias-disable;
+			drive-strength = <0x2>;
+			pins = "gpio67";
+		};
+	};
+};
+&qupv3_hub_i2c0 {
+ status = "okay";
+ #address-cells = <1>;
+ #size-cells = <0>;
+	annibale_tfa98xx_1_36: tfa98xx_1@36 {
+		spk-sw-gpio = <&tlmm 0x43 0x0>;
+		pinctrl-1 = <&annibale_rcv_gpio_low>;
+		pinctrl-0 = <&annibale_rcv_gpio_high>;
+		pinctrl-names = "rcv_gpio_high", "rcv_gpio_low";
+		interrupt-names = "smartpa_irq";
+		interrupts = <0x42 0x2008>;
+		interrupt-parent = <&tlmm>;
+		reset-polarity = <0>;
+		irq-gpio = <&tlmm 0x42 0x0>;
+		reg = <0x36>;
+		reset-gpio = <&tlmm 0x6c 0x0>;
+		cdc-vdd-1p8-supply = <&L15B>;
+		compatible = "tfa,tfa98xx";
+		status = "ok";
+		#sound-dai-cells = <0>;
+		xiaomi,annibale-audio;
+	};
+	annibale_tfa98xx_2_34: tfa98xx_2@34 {
+		interrupt-names = "smartpa_irq";
+		interrupts = <0x54 0x2008>;
+		interrupt-parent = <&tlmm>;
+		irq-gpio = <&tlmm 0x54 0x0>;
+		reg = <0x34>;
+		reset-polarity = <0>;
+		reset-gpio = <&tlmm 0x6b 0x0>;
+		cdc-vdd-1p8-supply = <&L15B>;
+		compatible = "tfa,tfa98xx";
+		status = "ok";
+		#sound-dai-cells = <0>;
+		xiaomi,annibale-audio;
+	};
+};

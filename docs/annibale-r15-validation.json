@@ -1,0 +1,213 @@
+{
+  "status": "passed",
+  "compositions": [
+    {
+      "base": "sun",
+      "variant": "tfa",
+      "sha256": "16d1422060f44c88c725a045251f01ce67494f0c8c0907f61271cc7f7ff8262c",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ]
+    },
+    {
+      "base": "sun",
+      "variant": "sia",
+      "sha256": "7da449deeb83ef73fc56b01b8e83f1104021708c532bdacd4bf7c48a0ad21553",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ]
+    },
+    {
+      "base": "sun-v2",
+      "variant": "tfa",
+      "sha256": "fa2004899cbe7983cb355a01163347ee5a99c4ff5f6c32541f322afcce850404",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ]
+    },
+    {
+      "base": "sun-v2",
+      "variant": "sia",
+      "sha256": "2178188cf29e2bb0d04b6cadd173eaf796c96f27420fbdc4749e97b4c7a76574",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ]
+    },
+    {
+      "base": "sun-tp",
+      "variant": "tfa",
+      "sha256": "d0dcd1e1466eca45007390f340fc19b4e7acaa006d9f3e0ec000b44bedc8e33a",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ]
+    },
+    {
+      "base": "sun-tp",
+      "variant": "sia",
+      "sha256": "a74896843f74a6da4f7d54c45c5eaf0c62a622cd72e4b8f16963248f57f841d9",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ]
+    },
+    {
+      "base": "sun-tp-v2",
+      "variant": "tfa",
+      "sha256": "329684ae2d7c1b8eeeef22cfc3aa4c6b2950a3edddc78e68ce0bc060820d0ee5",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ]
+    },
+    {
+      "base": "sun-tp-v2",
+      "variant": "sia",
+      "sha256": "afb315cfbd6156815a38d277bea195b5897b78779cc115fdcf918bb8330cdc4e",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ]
+    },
+    {
+      "base": "sunp",
+      "variant": "tfa",
+      "sha256": "527546e1d387a81c15df9ed7bca80e8cddd8b087ca429561db4c805d355592d0",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ]
+    },
+    {
+      "base": "sunp",
+      "variant": "sia",
+      "sha256": "9772b11ffeb93b43f0bbc0029df4e3b01e836635652f7739a58284db084cf32f",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ]
+    },
+    {
+      "base": "sunp-v2",
+      "variant": "tfa",
+      "sha256": "d8f2251bebb067f7fd7419c279550e5362ac290576a2c02959ca87289457df52",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ]
+    },
+    {
+      "base": "sunp-v2",
+      "variant": "sia",
+      "sha256": "31537193ff4edb7fb7c86c5c6b85684f94a4069b85451eeef09840272010ae96",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ]
+    },
+    {
+      "base": "sunp-tp",
+      "variant": "tfa",
+      "sha256": "bdf55cba16bc8a044f75f97f57d0e22e022aa2efc6029fb96952b09238e36eb3",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ]
+    },
+    {
+      "base": "sunp-tp",
+      "variant": "sia",
+      "sha256": "93d6d42c00c39a4fcbd558775a3c085862f4203b3d73dfcc12304e3aa0c32dc8",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ]
+    },
+    {
+      "base": "sunp-tp-v2",
+      "variant": "tfa",
+      "sha256": "a70c1b687259beb09aa7dbf9b739ccf7aaa96fc469f1b710953382e09b012420",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_1@36",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/tfa98xx_2@34"
+      ]
+    },
+    {
+      "base": "sunp-tp-v2",
+      "variant": "sia",
+      "sha256": "f262689f15b9652575bd406659f8fe7c4cb9d4e646c100d97baec8761cf017ff",
+      "codec_nodes": [
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_L@6E",
+        "/soc/qcom,qupv3_i2c_geni_se@9c0000/i2c@980000/sipa_i2c_R@6C"
+      ]
+    }
+  ],
+  "checks": [
+    "default-off and exclusive Kbuild selector in always-y",
+    "two ordered homogeneous enabled-family codec phandles",
+    "no opposite-family codec nodes",
+    "secondary TDM 2 slots, eight clock attributes 4",
+    "secondary TDM pins 121/123/122/124",
+    "WSA count zero"
+  ],
+  "scope": "SoC + common audio + one candidate overlay; syntax and selected final-tree assertions only; not full peripheral composition, bootloader DT table or hardware.",
+  "reference_dtbo_sha256": "e9582a2074d7f25af6f39204406a7c7212139f7d092e2e5010e226d3b27125c8",
+  "sources_sha256": {
+    "qcom/audio/annibale-audio-tfa-test.dts": "8d5a12447f71c0899e0685d2faf74098af8be6668322f3e05f9d62141535a5ed",
+    "qcom/audio/annibale-audio-sia-test.dts": "ad0f1429abf72241f628c41a05bdc9a9f70332d8fe1e88cf078ab441fbd60e73"
+  },
+  "warning_logs": {
+    "annibale-audio-sia-test.warnings": {
+      "sha256": "19f8ee4c9964e91432ae77cf5e305137096090ee85599c3755b34e30ac4ca9e2",
+      "lines": 18
+    },
+    "sun-audio.warnings": {
+      "sha256": "2da17eead4deeab59e58a24a056d0ef4e71b606c0c6bbebd2b6c960bcc9b3671",
+      "lines": 33
+    },
+    "sun-v2.warnings": {
+      "sha256": "c8469caa9c142e7aaf6b4ee9647a3228bc6b5db23924334c515eca741b4f0c39",
+      "lines": 254
+    },
+    "sunp-tp-v2.warnings": {
+      "sha256": "e58b5409bd653568249dde9d66bb20c9588778f3b21ba12dfd30b1e7a6b71cfb",
+      "lines": 254
+    },
+    "sun-tp-v2.warnings": {
+      "sha256": "20a0ead4ca29f14b66850ec5aef7bd21c327ab5dee1c60835bbec76340824777",
+      "lines": 254
+    },
+    "sunp-v2.warnings": {
+      "sha256": "58da9066955cb6a2d085490ab5d5188578ab6b93b11a92f9861244896d1caa5f",
+      "lines": 254
+    },
+    "sunp-tp.warnings": {
+      "sha256": "de6bef2237f69da06abb7c6b576938e5f74ae5ce93da442d45f1d05cd4adf389",
+      "lines": 254
+    },
+    "sunp.warnings": {
+      "sha256": "ccfb7ee949e902dce7b846043e17fa9a32a77223176c18a2e7c20d86fa86a638",
+      "lines": 254
+    },
+    "sun-tp.warnings": {
+      "sha256": "1f616400449666e80d7dbc948c076716a0e704a4407ce452a91f688ab1e05121",
+      "lines": 254
+    },
+    "annibale-audio-tfa-test.warnings": {
+      "sha256": "197418bcf59437d743a1bd780e12242567cec4290e9159ec7aeddbf612781c3b",
+      "lines": 18
+    },
+    "sun.warnings": {
+      "sha256": "e8ea374b84d545126e142790b6188291b756cee82098888a1ccb533dba7cb7a9",
+      "lines": 254
+    },
+    "annibale-sm8750-overlay.warnings": {
+      "sha256": "17aa4c4692ee04948fc98e564446400c6921b2d138f9f933dd0337462f8d05c1",
+      "lines": 99
+    }
+  }
+}

@@ -1,3 +1,5 @@
+R15 adds separately selected [audio DT candidates](annibale-audio.md); the earlier checks below did not include audio.
+
 # Annibale SoC device-tree import
 
 This change adds the REDMI K90 / POCO F8 Pro (`annibale`) board overlay to the
