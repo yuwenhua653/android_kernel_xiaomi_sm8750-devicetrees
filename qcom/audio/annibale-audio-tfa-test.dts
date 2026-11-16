@@ -6,6 +6,7 @@
 /dts-v1/;
 /plugin/;
 #include "sun-audio-overlay.dtsi"
+#include "annibale-audio-dmic.dtsi"
 
 &sun_snd {
  qcom,tdm-max-slots = <0x2>;

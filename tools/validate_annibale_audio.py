@@ -50,6 +50,13 @@ for name in files[:8]:
   pin=f.nodes[ph[cells(snd['qcom,sec-mi2s-gpios'])[0]]]
   active=[ph[x] for x in cells(pin['pinctrl-0'])]
   assert [f.nodes[p+'/mux']['pins'] for p in active]==[b'gpio121\0',b'gpio123\0',b'gpio122\0',b'gpio124\0']
+  dmic=f.nodes[ph[cells(snd['qcom,cdc-dmic-enable-gpios'])[0]]]
+  assert dmic['compatible']==b'qcom,msm-cdc-pinctrl\0'
+  assert dmic['pinctrl-names']==b'aud_active\0aud_sleep\0'
+  for state,level in [('pinctrl-0','output-high'),('pinctrl-1','output-low')]:
+   nodes=[ph[x] for x in cells(dmic[state])]
+   assert [f.nodes[p+'/mux']['pins'] for p in nodes]==[b'gpio183\0',b'gpio182\0']
+   assert all(level in f.nodes[p+'/config'] for p in nodes)
   rows.append({'base':name,'variant':variant,'sha256':hashlib.sha256(result.read_bytes()).hexdigest(),'codec_nodes':codec_paths})
-record={'status':'passed','compositions':rows,'checks':['default-off and exclusive Kbuild selector in always-y','two ordered homogeneous enabled-family codec phandles','no opposite-family codec nodes','secondary TDM 2 slots, eight clock attributes 4','secondary TDM pins 121/123/122/124','WSA count zero'], 'scope':'SoC + common audio + one candidate overlay; syntax and selected final-tree assertions only; not full peripheral composition, bootloader DT table or hardware.'}
+record={'status':'passed','compositions':rows,'checks':['default-off and exclusive Kbuild selector in always-y','two ordered homogeneous enabled-family codec phandles','no opposite-family codec nodes','secondary TDM 2 slots, eight clock attributes 4','secondary TDM pins 121/123/122/124','WSA count zero','DMIC enable GPIO183/182 active-high and sleep-low'], 'scope':'SoC + common audio + one candidate overlay; syntax and selected final-tree assertions only; not full peripheral composition, bootloader DT table or hardware.'}
 (out/'validation.json').write_text(json.dumps(record,indent=2)+'\n');print('PASS',len(rows),'audio candidate compositions')

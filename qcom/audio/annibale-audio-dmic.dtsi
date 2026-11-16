@@ -1,0 +1,68 @@
+// SPDX-License-Identifier: BSD-3-Clause
+/* DMIC enable wiring reconstructed from Annibale OS4.0.6.0.XPKCNXM.
+ * Included only by the explicit source-audio candidates.
+ */
+&sun_snd {
+ qcom,cdc-dmic-enable-gpios = <&annibale_cdc_dmic_enable_gpios>;
+};
+&soc {
+	annibale_cdc_dmic_enable_gpios: cdc_dmic_enable_pinctrl {
+		#gpio-cells = <0x0>;
+		pinctrl-1 = <&annibale_cdc_dmic01_enable_sleep &annibale_cdc_dmic23_enable_sleep>;
+		pinctrl-0 = <&annibale_cdc_dmic01_enable_active &annibale_cdc_dmic23_enable_active>;
+		pinctrl-names = "aud_active", "aud_sleep";
+		compatible = "qcom,msm-cdc-pinctrl";
+	};
+};
+&tlmm {
+ cdc_dmic_enable_pinctrl {
+		annibale_cdc_dmic01_enable_active: cdc_dmic01_enable_active {
+			mux {
+				function = "gpio";
+				pins = "gpio183";
+			};
+			config {
+				output-high;
+				bias-pull-up;
+				drive-strength = <0x8>;
+				pins = "gpio183";
+			};
+		};
+		annibale_cdc_dmic01_enable_sleep: cdc_dmic01_enable_sleep {
+			mux {
+				function = "gpio";
+				pins = "gpio183";
+			};
+			config {
+				output-low;
+				bias-disable;
+				drive-strength = <0x2>;
+				pins = "gpio183";
+			};
+		};
+		annibale_cdc_dmic23_enable_active: cdc_dmic23_enable_active {
+			mux {
+				function = "gpio";
+				pins = "gpio182";
+			};
+			config {
+				output-high;
+				bias-pull-up;
+				drive-strength = <0x8>;
+				pins = "gpio182";
+			};
+		};
+		annibale_cdc_dmic23_enable_sleep: cdc_dmic23_enable_sleep {
+			mux {
+				function = "gpio";
+				pins = "gpio182";
+			};
+			config {
+				output-low;
+				bias-disable;
+				drive-strength = <0x2>;
+				pins = "gpio182";
+			};
+		};
+ };
+};

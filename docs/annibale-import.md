@@ -1,3 +1,5 @@
+R16 extends the [audio candidates](annibale-audio.md) with the OS4 DMIC enable provider and pins; see annibale-r16-validation.json.
+
 R15 adds separately selected [audio DT candidates](annibale-audio.md); the earlier checks below did not include audio.
 
 # Annibale SoC device-tree import

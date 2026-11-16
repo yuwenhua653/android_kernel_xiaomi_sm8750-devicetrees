@@ -1,4 +1,10 @@
-# R15: explicitly selected Annibale audio DT candidates
+# R15/R16: explicitly selected Annibale audio DT candidates
+
+R16 adds `annibale-audio-dmic.dtsi` and checks the reconstructed microphone
+enable pins in each candidate. Use the matching R16 machine driver to consume
+`qcom,cdc-dmic-enable-gpios`. Its provider must probe before the card can bind.
+The driver matches Xiaomi's policy of keeping these pins enabled while bound;
+failed probe/unbind returns them to sleep. This is not per-stream power gating.
 
 `qcom/audio/annibale-audio-{tfa,sia}-test.dts` reconstructs the selected smartpa
 board wiring from the user's OS4.0.6.0.XPKCNXM DTBO. These are experimental
@@ -19,13 +25,15 @@ source provenance in `annibale-import.md` is separate.
 | TFA pair | I2C 0x36 / 0x34, reset 108 / 107, IRQ 66 / 84 |
 | SIA pair | I2C 0x6e / 0x6c, platform channels 0 / 1, reset 108 / 107 |
 | Speaker switch | GPIO 67 |
+| Digital microphone enable | GPIO 183 / 182, active output-high, sleep output-low |
 | Selection contract | Two ordered `xiaomi,smartpa-codecs` phandles; explicit provider markers |
 
 The candidates preserve selected stock electrical values, including existing
 duplicate strings in SIA pin lists. They override the generic card's TDM,
 digital routes, WCD-disable and WSA-count settings and disable four common WSA
-codec nodes. They do not import unrelated USB switch or microphone-enable
-policy. Those remaining board differences need separate driver and HAL review.
+codec nodes. R16 imports the selected stock DMIC enable provider and four
+active/sleep pin states. It does not import unrelated USB switch policy.
+Remaining board differences need separate driver and HAL review.
 
 The stock overlay contains both smartpa families. It does not establish which
 family is fitted in the user's phone. Choose exactly one only after hardware
@@ -58,7 +66,8 @@ python3 -B sm8750-devicetrees/tools/validate_annibale_audio.py \
 The validator compiles eight SUN/SUNP bases and composes each with the Annibale
 SoC overlay, common audio overlay and one candidate: 16 combinations. It checks
 the real Kbuild selector, final codec phandles/addresses/markers, no opposite
-family, TDM pin routing, slot and clock values. Compiler warnings are retained
+family, TDM pin routing, slot/clock values and DMIC enable polarity/pins.
+R16 results are recorded in `annibale-r16-validation.json`. Compiler warnings are retained
 per input; a successful merge is not a clean dt-schema check. The checked
 composition excludes other peripheral overlays and does not prove bootloader
 selection, firmware agreement, GPIO ownership at runtime or working audio.
