@@ -1,0 +1,1147 @@
+{
+  "schema_version": 1,
+  "scope": "Selected factual wireless DT bindings, not proprietary firmware or complete stock DT",
+  "source": {
+    "manifest_sha256": "b8e2f34b24b08c6c6f92fdafc8fd2618e282aeaa82671cd217c07eaf6679c39a",
+    "ota_etag": "\"53FB1A0CD09F47AB51D6924206227BF9-400\"",
+    "partitions": {
+      "vendor_boot": {
+        "size": 100663296,
+        "sha256": "38d4b91165578133a2c1626f343599356959d771e2ae061c47627dcdbafd962a",
+        "operations": 48,
+        "operation_hashes_verified": true,
+        "partition_hash_verified": true
+      },
+      "dtbo": {
+        "size": 18874368,
+        "sha256": "e9582a2074d7f25af6f39204406a7c7212139f7d092e2e5010e226d3b27125c8",
+        "operations": 9,
+        "operation_hashes_verified": true,
+        "partition_hash_verified": true
+      }
+    },
+    "ota_signature_verified": false
+  },
+  "profiles": {
+    "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4": {
+      "nodes": {
+        "/reserved-memory/cnss_wlan_region": {
+          "compatible": "7368617265642d646d612d706f6f6c00",
+          "alloc-ranges": "000000000000000000000000ffffffff",
+          "reusable": "",
+          "alignment": "0000000000400000",
+          "size": "0000000002000000"
+        },
+        "/soc/bt_kiwi": {
+          "compatible": "71636f6d2c6b69776900",
+          "nvmem-cells": [
+            {
+              "provider": "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-set@9a",
+              "args": []
+            },
+            {
+              "provider": "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-chg-pon@9f",
+              "args": []
+            },
+            {
+              "provider": "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-cnt2-stop@a2",
+              "args": []
+            }
+          ],
+          "nvmem-cell-names": "666d645f73657400666d645f6368675f706f6e00666d645f636e74325f73746f7000",
+          "clocks": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/clock-controller",
+              "args": [
+                6
+              ]
+            }
+          ],
+          "clock-names": "62745f72665f636c6b3100",
+          "pinctrl-names": "62745f656e0073775f6374726c0062745f666d645f636c6b5f656e00",
+          "pinctrl-0": [
+            {
+              "provider": "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800/bt_en",
+              "args": []
+            }
+          ],
+          "pinctrl-1": [
+            {
+              "provider": "/soc/pinctrl@f000000/cnss_wlan_sw_ctrl",
+              "args": []
+            }
+          ],
+          "pinctrl-2": [
+            {
+              "provider": "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800/bt_fmd_clk_en",
+              "args": []
+            }
+          ],
+          "mpm_wake_set_gpios": "00000012",
+          "qcom,wl-reset-gpio": [
+            {
+              "provider": "/soc/pinctrl@f000000",
+              "args": [
+                16,
+                0
+              ]
+            }
+          ],
+          "qcom,bt-sw-ctrl-gpio": [
+            {
+              "provider": "/soc/pinctrl@f000000",
+              "args": [
+                18,
+                0
+              ]
+            }
+          ],
+          "qcom,bt-fmd-clk-gpio": [
+            {
+              "provider": "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800",
+              "args": [
+                6,
+                0
+              ]
+            }
+          ],
+          "qcom,bt-reset-gpio": [
+            {
+              "provider": "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800",
+              "args": [
+                3,
+                0
+              ]
+            }
+          ],
+          "qcom,qmp": [
+            {
+              "provider": "/soc/power-controller@c300000",
+              "args": []
+            }
+          ],
+          "qcom,bt-vdd18-aon-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-ldof3/regulator-pm-vxf-l3",
+              "args": []
+            }
+          ],
+          "qcom,bt-vdd12-io-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-ldof2/regulator-pm-vxf-l2",
+              "args": []
+            }
+          ],
+          "qcom,bt-ant-ldo-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-ldok6/regulator-pmr-nalojr-l6",
+              "args": []
+            }
+          ],
+          "qcom,bt-vdd-aon-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpd1/regulator-pm-v8d-s1",
+              "args": []
+            }
+          ],
+          "qcom,bt-vdd-rfaOp8-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpd1/regulator-pm-v8d-s1",
+              "args": []
+            }
+          ],
+          "qcom,bt-vdd-rfa1-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpi7/regulator-pm-v8i-s7",
+              "args": []
+            }
+          ],
+          "qcom,bt-vdd-rfa2-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpg3/regulator-pm-v8g-s3",
+              "args": []
+            }
+          ],
+          "qcom,bt-vdd18-aon-config": "001b7740001b7740000075300000000100000001",
+          "qcom,bt-vdd12-io-config": "00124f8000124f80000075300000000100000001",
+          "qcom,bt-ant-ldo-config": "001b7740001b7740000000000000000100000000",
+          "qcom,bt-vdd-aon-config": "000dfa200010c8e0000000000000000100000000",
+          "qcom,bt-vdd-rfaOp8-config": "000dfa200010c8e0000000000000000100000000",
+          "qcom,bt-vdd-rfa1-config": "001414a000147260000000000000000100000000",
+          "qcom,bt-vdd-rfa2-config": "001c7140001e8480000000000000000100000000",
+          "qcom,pdc_init_table": "7b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207333672e762c20757076616c3a20313835367d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207333672e762c2064776e76616c3a20313834347d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207337692e762c20757076616c3a20313331367d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207337692e762c2064776e76616c3a203937327d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207331642e6d2c20656e61626c653a20317d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207331642e762c20656e61626c653a20317d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207331642e762c20757076616c3a203931367d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207331642e762c2064776e76616c3a203838307d00"
+        },
+        "/soc/pcie@1c00000": {
+          "compatible": "71636f6d2c7063692d6d736d00",
+          "device_type": "70636900",
+          "reg": "01c000000000300001c06000000020004000000000000f1d40000f20000000a84000100000001000401000000010000001d0700000007000",
+          "reg-names": "706172660070687900646d5f636f726500656c6269006961747500636f6e6600706369655f736d00",
+          "cell-index": "00000000",
+          "linux,pci-domain": "00000000",
+          "#address-cells": "00000003",
+          "#size-cells": "00000002",
+          "ranges": "010000000000000040200000402000000000000000100000020000000000000040300000403000000000000003d00000",
+          "interrupts": "000000000000008c00000004000000000000009500000004000000000000009600000004000000000000009700000004000000000000009800000004",
+          "interrupt-names": "696e745f676c6f62616c5f696e7400696e745f6100696e745f6200696e745f6300696e745f6400",
+          "msi-map": [
+            {
+              "rid": 0,
+              "provider": "/soc/interrupt-controller@16000000/msi-controller@0x16040000",
+              "args": [
+                5120,
+                1
+              ]
+            },
+            {
+              "rid": 256,
+              "provider": "/soc/interrupt-controller@16000000/msi-controller@0x16040000",
+              "args": [
+                5121,
+                1
+              ]
+            }
+          ],
+          "perst-gpio": [
+            {
+              "provider": "/soc/pinctrl@f000000",
+              "args": [
+                102,
+                0
+              ]
+            }
+          ],
+          "wake-gpio": [
+            {
+              "provider": "/soc/pinctrl@f000000",
+              "args": [
+                104,
+                0
+              ]
+            }
+          ],
+          "pinctrl-names": "64656661756c7400736c65657000",
+          "pinctrl-0": [
+            {
+              "provider": "/soc/pinctrl@f000000/pcie0/pcie0_perst_default",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_default",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/pcie0/pcie0_wake_default",
+              "args": []
+            }
+          ],
+          "pinctrl-1": [
+            {
+              "provider": "/soc/pinctrl@f000000/pcie0/pcie0_perst_default",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_sleep",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/pcie0/pcie0_wake_default",
+              "args": []
+            }
+          ],
+          "gdsc-phy-vdd-supply": [
+            {
+              "provider": "/soc/qcom,gdsc@16c000",
+              "args": []
+            }
+          ],
+          "qcom,bw-scale": "00000040000000400124f80000000040000000400124f800000001000000010005f5e100",
+          "interconnect-names": "6963635f7061746800",
+          "interconnects": [
+            {
+              "provider": "/soc/interconnect@16c0000",
+              "args": [
+                5003
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@1",
+              "args": [
+                5512
+              ]
+            }
+          ],
+          "resets": [
+            {
+              "provider": "/soc/clock-controller@100000",
+              "args": [
+                6
+              ]
+            },
+            {
+              "provider": "/soc/clock-controller@100000",
+              "args": [
+                9
+              ]
+            }
+          ],
+          "reset-names": "706369655f305f636f72655f726573657400706369655f305f7068795f726573657400",
+          "dma-coherent": "",
+          "qcom,smmu-sid-base": "00001400",
+          "iommu-map": [
+            {
+              "rid": 0,
+              "provider": "/soc/apps-smmu@15000000",
+              "args": [
+                5120,
+                1
+              ]
+            },
+            {
+              "rid": 256,
+              "provider": "/soc/apps-smmu@15000000",
+              "args": [
+                5121,
+                1
+              ]
+            }
+          ],
+          "qcom,boot-option": "00000001",
+          "qcom,aux-clk-freq": "00000014",
+          "qcom,l1-2-th-scale": "00000002",
+          "qcom,l1-2-th-value": "00000096",
+          "qcom,ep-latency": "0000000a",
+          "qcom,num-parf-testbus-sel": "000000b9",
+          "qcom,pcie-phy-ver": "0000005e",
+          "qcom,phy-status-offset": "00000414",
+          "qcom,phy-status-bit": "00000006",
+          "qcom,phy-power-down-offset": "00000440",
+          "qcom,phy-sequence": "000004400000000300000000000000c00000000100000000000000cc0000006200000000000000d0000000020000000000000060000000f800000000000000640000000100000000000000000000009300000000000000040000000100000000000000e00000009000000000000000e40000008200000000000000f40000000700000000000000700000000200000000000000100000000200000000000000740000001600000000000000140000001600000000000000780000003600000000000000180000003600000000000001100000000800000000000000bc0000000a00000000000001200000004200000000000000800000000400000000000000840000000d00000000000000200000000a00000000000000240000001a0000000000000088000000410000000000000028000000340000000000000090000000ab0000000000000094000000aa000000000000009800000001000000000000003000000055000000000000003400000055000000000000003800000001000000000000014000000014000000000000016400000034000000000000003c00000001000000000000001c0000000400000000000001740000001600000000000001bc0000000f0000000000000170000000a000000000000013a40000003800000000000012dc000000110000000000001360000000bf0000000000001364000000bf0000000000001368000000b7000000000000136c000000ea000000000000135c0000003f000000000000137400000009000000000000137800000049000000000000137c0000001b00000000000013800000008f0000000000001370000000d1000000000000138800000009000000000000138c0000004900000000000013900000001b00000000000013940000008f0000000000001384000000d100000000000012c40000003e00000000000012c80000001e00000000000012cc000000d2000000000000120800000009000000000000121400000005000000000000124c0000000800000000000012500000000800000000000012d80000000900000000000013180000001c000000000000131c0000006000000000000012f80000000700000000000013f800000008000000000000180000000000000000000000108400000035000000000000108c0000001000000000000010900000003100000000000010940000007f00000000000010e400000002000000000000104000000008000000000000103c000000140000000000001ba4000000380000000000001adc000000110000000000001b60000000bf0000000000001b64000000bf0000000000001b68000000b70000000000001b6c000000ea0000000000001b5c0000003f0000000000001b74000000090000000000001b78000000490000000000001b7c0000001b0000000000001b800000008f0000000000001b70000000d10000000000001b88000000090000000000001b8c000000490000000000001b900000001b0000000000001b940000008f0000000000001b84000000d10000000000001ac40000003e0000000000001ac80000001e0000000000001acc000000d20000000000001a08000000090000000000001a14000000050000000000001a4c000000080000000000001a50000000080000000000001ad8000000090000000000001b180000001c0000000000001b1c000000600000000000001af8000000070000000000001bf800000008000000000000188400000035000000000000188c0000001000000000000018900000003100000000000018940000007f00000000000018e400000002000000000000184000000008000000000000183c0000001400000000000004dc0000000500000000000005880000007700000000000005980000000b00000000000008a40000001e00000000000008f40000002700000000000005e40000000f000000000000080c0000001d0000000000000814000000070000000000000820000000c100000000000008940000000000000000000008f80000001f00000000000005d00000008c00000000000005680000001700000000000005700000002e00000000000004000000000000000000000004440000000300000000",
+          "qcom,drv-name": "636573746100",
+          "qcom,drv-l1ss-timeout-us": "00001388",
+          "qcom,pcie-clkreq-offset": "00002c48",
+          "qcom,pcie-clkreq-pin": "00000067",
+          "qcom,pcie-sm-branch-offset": "00001000",
+          "qcom,pcie-sm-start-offset": "00001090",
+          "qcom,pcie-sm-seq": "1c0180817007400250028000280070038080400270021c011800180270005000100040008081400218001c011c01808000000100",
+          "qcom,pcie-sm-branch-seq": "000000040000001c000000240000002c000000000000000000000000",
+          "qcom,pcie-sm-debug": "000010400000104800001050000010580000106000001068000010700000107800001080000010880000109000001094000010980000109c"
+        },
+        "/soc/pcie@1c00000/pcie0_rp": {
+          "reg": "0000000000000000000000000000000000000000",
+          "#address-cells": "00000003",
+          "#size-cells": "00000002"
+        },
+        "/soc/pcie@1c00000/pcie0_rp/cnss_pci0": {
+          "reg": "0000000000000000000000000000000000000000",
+          "qcom,iommu-group": [
+            {
+              "provider": "/soc/pcie@1c00000/pcie0_rp/cnss_pci0/cnss_pci_iommu_group0",
+              "args": []
+            }
+          ],
+          "memory-region": [
+            {
+              "provider": "/reserved-memory/cnss_wlan_region",
+              "args": []
+            },
+            {
+              "provider": "/soc/pcie@1c00000/pcie0_rp/cnss_pci0/cnss_pci0_iommu_region_partition",
+              "args": []
+            }
+          ],
+          "#address-cells": "00000001",
+          "#size-cells": "00000001"
+        },
+        "/soc/pcie@1c00000/pcie0_rp/cnss_pci0/cnss_pci0_iommu_region_partition": {
+          "iommu-addresses": [
+            {
+              "provider": "/soc/pcie@1c00000/pcie0_rp/cnss_pci0",
+              "args": [
+                0,
+                0,
+                0,
+                0,
+                2550136832
+              ]
+            },
+            {
+              "provider": "/soc/pcie@1c00000/pcie0_rp/cnss_pci0",
+              "args": [
+                0,
+                0,
+                2952790016,
+                0,
+                1342177280
+              ]
+            }
+          ]
+        },
+        "/soc/pcie@1c00000/pcie0_rp/cnss_pci0/cnss_pci_iommu_group0": {
+          "qcom,iommu-msi-size": "00001000",
+          "qcom,iommu-geometry": "9800000018010000",
+          "qcom,iommu-dma": "666173746d617000",
+          "qcom,iommu-pagetable": "636f686572656e7400",
+          "qcom,iommu-faults": "7374616c6c2d64697361626c65004855504346006e6f6e2d666174616c00"
+        },
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_active": {},
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_active/config": {
+          "pins": "6770696f313600",
+          "drive-strength": "00000010",
+          "output-high": "",
+          "bias-pull-up": ""
+        },
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_active/mux": {
+          "pins": "6770696f313600",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_sleep": {},
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_sleep/config": {
+          "pins": "6770696f313600",
+          "drive-strength": "00000002",
+          "output-low": "",
+          "bias-pull-down": ""
+        },
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_sleep/mux": {
+          "pins": "6770696f313600",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_sw_ctrl": {},
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_sw_ctrl/mux": {
+          "pins": "6770696f313800",
+          "function": "77636e5f73775f6374726c00"
+        },
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_sw_ctrl_wl_cx": {},
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_sw_ctrl_wl_cx/mux": {
+          "pins": "6770696f313900",
+          "function": "77636e5f737700"
+        },
+        "/soc/pinctrl@f000000/cnss_wlan_sw_ctrl": {},
+        "/soc/pinctrl@f000000/cnss_wlan_sw_ctrl/mux": {
+          "pins": "6770696f313800",
+          "function": "77636e5f73775f6374726c00"
+        },
+        "/soc/qcom,cnss-kiwi@b0000000": {
+          "compatible": "71636f6d2c636e73732d6b69776900",
+          "reg": "b000000000010000",
+          "reg-names": "736d6d755f696f76615f69706100",
+          "qcom,wlan-sw-ctrl-gpio": [
+            {
+              "provider": "/soc/pinctrl@f000000",
+              "args": [
+                19,
+                0
+              ]
+            }
+          ],
+          "supported-ids": "00001107",
+          "wlan-en-gpio": [
+            {
+              "provider": "/soc/pinctrl@f000000",
+              "args": [
+                16,
+                0
+              ]
+            }
+          ],
+          "qcom,bt-en-gpio": [
+            {
+              "provider": "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800",
+              "args": [
+                3,
+                0
+              ]
+            }
+          ],
+          "qcom,sw-ctrl-gpio": [
+            {
+              "provider": "/soc/pinctrl@f000000",
+              "args": [
+                18,
+                0
+              ]
+            }
+          ],
+          "mpm_wake_set_gpios": "0000001200000013",
+          "pinctrl-names": "776c616e5f656e5f61637469766500776c616e5f656e5f736c6565700073775f6374726c0073775f6374726c5f776c5f637800",
+          "pinctrl-0": [
+            {
+              "provider": "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_active",
+              "args": []
+            }
+          ],
+          "pinctrl-1": [
+            {
+              "provider": "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_sleep",
+              "args": []
+            }
+          ],
+          "pinctrl-2": [
+            {
+              "provider": "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_sw_ctrl",
+              "args": []
+            }
+          ],
+          "pinctrl-3": [
+            {
+              "provider": "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_sw_ctrl_wl_cx",
+              "args": []
+            }
+          ],
+          "qcom,wlan": "",
+          "qcom,wlan-rc-num": "00000000",
+          "qcom,wlan-ramdump-dynamic": "00780000",
+          "cnss-enable-self-recovery": "",
+          "qcom,wlan-cbc-enabled": "",
+          "use-pm-domain": "",
+          "qcom,same-dt-multi-dev": "",
+          "qcom,qmp": [
+            {
+              "provider": "/soc/power-controller@c300000",
+              "args": []
+            }
+          ],
+          "vdd-wlan-io-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-ldof3/regulator-pm-vxf-l3",
+              "args": []
+            }
+          ],
+          "qcom,vdd-wlan-io-config": "001b7740001b7740000075300000000000000001",
+          "vdd-wlan-io12-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-ldof2/regulator-pm-vxf-l2",
+              "args": []
+            }
+          ],
+          "qcom,vdd-wlan-io12-config": "00124f8000124f80000075300000000000000001",
+          "vdd-wlan-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpf5/regulator-pm-v8f-s5",
+              "args": []
+            }
+          ],
+          "qcom,vdd-wlan-config": "000e38a0000f4240000000000000000000000001",
+          "vdd-wlan-aon-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpd4/regulator-pm-v8d-s4",
+              "args": []
+            }
+          ],
+          "qcom,vdd-wlan-aon-config": "000ee480000fcee0000000000000000000000001",
+          "vdd-wlan-dig-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpd1/regulator-pm-v8d-s1",
+              "args": []
+            }
+          ],
+          "qcom,vdd-wlan-dig-config": "000dfa200010c8e0000000000000000000000001",
+          "vdd-wlan-rfa1-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpg3/regulator-pm-v8g-s3",
+              "args": []
+            }
+          ],
+          "qcom,vdd-wlan-rfa1-config": "001c7140001e8480000000000000000000000001",
+          "vdd-wlan-rfa2-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-smpi7/regulator-pm-v8i-s7",
+              "args": []
+            }
+          ],
+          "qcom,vdd-wlan-rfa2-config": "001414a000147260000000000000000000000001",
+          "vdd-wlan-ant-share-supply": [
+            {
+              "provider": "/soc/rsc@16500000/drv@2/rpmh-regulator-ldok6/regulator-pmr-nalojr-l6",
+              "args": []
+            }
+          ],
+          "qcom,vdd-wlan-ant-share-config": "001b7740001b7740000000000000000000000001",
+          "interconnects": [
+            {
+              "provider": "/soc/interconnect@16c0000",
+              "args": [
+                47
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@16c0000",
+              "args": [
+                561
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@24100000",
+              "args": [
+                27
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@1",
+              "args": [
+                513
+              ]
+            }
+          ],
+          "interconnect-names": "706369655f746f5f6d656d6e6f63006d656d6e6f635f746f5f64647200",
+          "qcom,icc-path-count": "00000002",
+          "qcom,bus-bw-cfg-count": "00000009",
+          "qcom,bus-bw-cfg": "0000000000000000000008ca000c350000001d4c000c350000007530000c3500000186a0000c35000002ab98003131c00004c4b4003131c00008f6ec0041104000001d4c00186a000000000000000000000008ca0021660000001d4c002166000000753000216600000186a0002166000002ab98005eec000004c4b4007faf800008f6ec00c3500000001d4c00216600",
+          "qcom,vreg_pdc_map": "7335660062620073346400626200733367007266007337690072660073316400726600",
+          "qcom,pmu_vreg_map": "5644443039355f4d585f504d5500733464005644443039355f504d5500733566005644445f504d555f414f4e5f4900733164005644443039355f504d555f4254007331640056444430395f504d555f5246415f49007331640056444431335f504d555f504349455f49007337690056444431335f504d555f5246415f49007337690056444431395f504d555f504349455f49007333670056444431395f504d555f5246415f490073336700",
+          "qcom,pdc_init_table": "7b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207333672e762c20757076616c3a20313835367d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207333672e762c2064776e76616c3a20313834347d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207337692e762c20757076616c3a20313331367d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207337692e762c2064776e76616c3a203937327d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207331642e6d2c20656e61626c653a20317d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207331642e762c20656e61626c653a20317d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207331642e762c20757076616c3a203931367d007b636c6173733a20776c616e5f7064632c2073733a2072662c207265733a207331642e762c2064776e76616c3a203838307d007b636c6173733a20776c616e5f7064632c2073733a2062622c207265733a207334642e762c20757076616c3a203937367d007b636c6173733a20776c616e5f7064632c2073733a2062622c207265733a207334642e762c2064776e76616c3a203533367d007b636c6173733a20776c616e5f7064632c2073733a2062622c207265733a207335662e6d2c20656e61626c653a20317d007b636c6173733a20776c616e5f7064632c2073733a2062622c207265733a207335662e762c20656e61626c653a20317d007b636c6173733a20776c616e5f7064632c2073733a2062622c207265733a207335662e762c20757076616c3a203933327d007b636c6173733a20776c616e5f7064632c2073733a2062622c207265733a207335662e762c2064776e76616c3a203434347d00",
+          "wlan-txrx-intr-cpumask": "0000000300000030"
+        },
+        "/soc/qcom,qupv3_2_geni_se@8c0000/qcom,qup_uart@898000": {
+          "compatible": "71636f6d2c6d736d2d67656e692d73657269616c2d687300",
+          "reg": "0089800000004000",
+          "reg-names": "73655f7068797300",
+          "interrupts-extended": [
+            {
+              "provider": "/soc/interrupt-controller@16000000",
+              "args": [
+                0,
+                461,
+                4
+              ]
+            },
+            {
+              "provider": "/soc/pinctrl@f000000",
+              "args": [
+                27,
+                4
+              ]
+            }
+          ],
+          "clock-names": "73652d636c6b00",
+          "clocks": [
+            {
+              "provider": "/soc/clock-controller@100000",
+              "args": [
+                121
+              ]
+            }
+          ],
+          "interconnect-names": "7175702d636f7265007175702d636f6e666967007175702d6d656d6f727900",
+          "interconnects": [
+            {
+              "provider": "/soc/interconnect@0",
+              "args": [
+                40
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@0",
+              "args": [
+                568
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@24100000",
+              "args": [
+                2
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@1600000",
+              "args": [
+                536
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@1700000",
+              "args": [
+                7
+              ]
+            },
+            {
+              "provider": "/soc/interconnect@1",
+              "args": [
+                513
+              ]
+            }
+          ],
+          "pinctrl-names": "64656661756c740061637469766500736c6565700073687574646f776e00",
+          "pinctrl-0": [
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_cts",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rts",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_tx",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rx",
+              "args": []
+            }
+          ],
+          "pinctrl-1": [
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_cts",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rts",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_tx",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_active",
+              "args": []
+            }
+          ],
+          "pinctrl-2": [
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_cts",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rts",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_tx",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_wake",
+              "args": []
+            }
+          ],
+          "pinctrl-3": [
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_cts",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rts",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_tx",
+              "args": []
+            },
+            {
+              "provider": "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rx",
+              "args": []
+            }
+          ],
+          "qcom,wakeup-byte": "000000fd",
+          "qcom,suspend-ignore-children": "",
+          "status": "enabled"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800/bt_en": {
+          "pins": "6770696f3300",
+          "function": "6e6f726d616c00",
+          "input-disable": "",
+          "output-enable": "",
+          "bias-disable": "",
+          "power-source": "00000001"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800/bt_fmd_clk_en": {
+          "pins": "6770696f3600",
+          "function": "6e6f726d616c00",
+          "input-enable": "",
+          "output-disable": "",
+          "bias-disable": "",
+          "power-source": "00000001"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-chg-pon@9f": {
+          "reg": "0000009f00000001"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-cnt2-stop@a2": {
+          "reg": "000000a200000001"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-set@9a": {
+          "reg": "0000009a00000001"
+        },
+        "/soc/slim@6C40000": {
+          "compatible": "71636f6d2c736c696d2d6e67642d76312e352e3000",
+          "reg": "06c400000002c00006c8e00000001000",
+          "reg-names": "6374726c00736c696d6275735f72656d6f74655f6d656d00",
+          "interrupts": "00000000000000a300000004",
+          "qcom,apps-ch-pipes": "00000000",
+          "qcom,ea-pc": "000004e0",
+          "dmas": [
+            {
+              "provider": "/soc/bamdma@6C04000",
+              "args": [
+                3
+              ]
+            },
+            {
+              "provider": "/soc/bamdma@6C04000",
+              "args": [
+                4
+              ]
+            }
+          ],
+          "dma-names": "727800747800",
+          "#address-cells": "00000001",
+          "#size-cells": "00000000",
+          "status": "enabled"
+        },
+        "/soc/slim@6C40000/ngd@1": {
+          "reg": "00000001",
+          "#address-cells": "00000001",
+          "#size-cells": "00000001"
+        },
+        "/soc/slim@6C40000/ngd@1/btfmslim-driver": {
+          "compatible": "736c696d3231372c32323100",
+          "reg": "0000000100000000",
+          "qcom,btslim-address": "00000000",
+          "qcom,btslimtx-channels": "0000009f000000a0",
+          "qcom,btslimrx-channels": "0000009d0000009e"
+        },
+        "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_default": {},
+        "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_default/config": {
+          "pins": "6770696f31303300",
+          "drive-strength": "00000002",
+          "bias-pull-up": ""
+        },
+        "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_default/mux": {
+          "pins": "6770696f31303300",
+          "function": "70636965305f636c6b5f7265715f6e00"
+        },
+        "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_sleep": {},
+        "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_sleep/config": {
+          "pins": "6770696f31303300",
+          "drive-strength": "00000002",
+          "bias-pull-up": ""
+        },
+        "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_sleep/mux": {
+          "pins": "6770696f31303300",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/pcie0/pcie0_perst_default": {},
+        "/soc/pinctrl@f000000/pcie0/pcie0_perst_default/config": {
+          "pins": "6770696f31303200",
+          "drive-strength": "00000002",
+          "bias-pull-down": ""
+        },
+        "/soc/pinctrl@f000000/pcie0/pcie0_perst_default/mux": {
+          "pins": "6770696f31303200",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/pcie0/pcie0_wake_default": {},
+        "/soc/pinctrl@f000000/pcie0/pcie0_wake_default/config": {
+          "pins": "6770696f31303400",
+          "drive-strength": "00000002",
+          "bias-pull-up": ""
+        },
+        "/soc/pinctrl@f000000/pcie0/pcie0_wake_default/mux": {
+          "pins": "6770696f31303400",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_cts": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_cts/config": {
+          "pins": "6770696f323400",
+          "drive-strength": "00000002",
+          "bias-disable": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_cts/mux": {
+          "pins": "6770696f323400",
+          "function": "717570325f7365365f6c3000"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_cts": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_cts/config": {
+          "pins": "6770696f323400",
+          "drive-strength": "00000002",
+          "bias-disable": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_cts/mux": {
+          "pins": "6770696f323400",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rts": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rts/config": {
+          "pins": "6770696f323500",
+          "drive-strength": "00000002",
+          "bias-pull-down": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rts/mux": {
+          "pins": "6770696f323500",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rx": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rx/config": {
+          "pins": "6770696f323700",
+          "drive-strength": "00000002",
+          "bias-pull-down": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rx/mux": {
+          "pins": "6770696f323700",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_tx": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_tx/config": {
+          "pins": "6770696f323600",
+          "drive-strength": "00000002",
+          "bias-pull-up": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_tx/mux": {
+          "pins": "6770696f323600",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rts": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rts/config": {
+          "pins": "6770696f323500",
+          "drive-strength": "00000002",
+          "bias-pull-down": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rts/mux": {
+          "pins": "6770696f323500",
+          "function": "717570325f7365365f6c3100"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_active": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_active/config": {
+          "pins": "6770696f323700",
+          "drive-strength": "00000002",
+          "bias-disable": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_active/mux": {
+          "pins": "6770696f323700",
+          "function": "717570325f7365365f6c3300"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_wake": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_wake/config": {
+          "pins": "6770696f323700",
+          "drive-strength": "00000002",
+          "bias-disable": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_wake/mux": {
+          "pins": "6770696f323700",
+          "function": "6770696f00"
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_tx": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_tx/config": {
+          "pins": "6770696f323600",
+          "drive-strength": "00000002",
+          "bias-pull-up": ""
+        },
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_tx/mux": {
+          "pins": "6770696f323600",
+          "function": "717570325f7365365f6c3200"
+        }
+      },
+      "suppliers": {
+        "/reserved-memory/cnss_wlan_region": {
+          "compatible": "7368617265642d646d612d706f6f6c00"
+        },
+        "/soc/apps-smmu@15000000": {
+          "compatible": "71636f6d2c71736d6d752d7635303000",
+          "reg": "1500000000100000",
+          "#iommu-cells": "00000002"
+        },
+        "/soc/bamdma@6C04000": {
+          "compatible": "71636f6d2c62616d2d76312e372e3000",
+          "reg": "06c040000002000006c8f00000001000",
+          "#dma-cells": "00000001"
+        },
+        "/soc/clock-controller@100000": {
+          "compatible": "71636f6d2c73756e2d67636300737973636f6e00",
+          "reg": "00100000001f4200",
+          "#clock-cells": "00000001",
+          "#reset-cells": "00000001"
+        },
+        "/soc/interconnect@0": {
+          "compatible": "71636f6d2c73756e2d636c6b5f7669727400",
+          "#interconnect-cells": "00000001"
+        },
+        "/soc/interconnect@1": {
+          "compatible": "71636f6d2c73756e2d6d635f7669727400",
+          "#interconnect-cells": "00000001"
+        },
+        "/soc/interconnect@1600000": {
+          "compatible": "71636f6d2c73756e2d636e6f635f63666700",
+          "reg": "0160000000006200",
+          "#interconnect-cells": "00000001"
+        },
+        "/soc/interconnect@16c0000": {
+          "compatible": "71636f6d2c73756e2d706369655f616e6f6300",
+          "reg": "016c000000011400",
+          "#interconnect-cells": "00000001"
+        },
+        "/soc/interconnect@1700000": {
+          "compatible": "71636f6d2c73756e2d6167677265325f6e6f6300",
+          "reg": "017000000001f400",
+          "#interconnect-cells": "00000001"
+        },
+        "/soc/interconnect@24100000": {
+          "compatible": "71636f6d2c73756e2d67656d5f6e6f6300",
+          "reg": "241000000014b080",
+          "#interconnect-cells": "00000001"
+        },
+        "/soc/interrupt-controller@16000000": {
+          "compatible": "61726d2c6769632d763300",
+          "reg": "16000000000100001608000000200000",
+          "#interrupt-cells": "00000003"
+        },
+        "/soc/interrupt-controller@16000000/msi-controller@0x16040000": {
+          "compatible": "61726d2c6769632d76332d69747300",
+          "reg": "1604000000020000"
+        },
+        "/soc/pcie@1c00000/pcie0_rp/cnss_pci0": {
+          "reg": "0000000000000000000000000000000000000000"
+        },
+        "/soc/pcie@1c00000/pcie0_rp/cnss_pci0/cnss_pci0_iommu_region_partition": {},
+        "/soc/pcie@1c00000/pcie0_rp/cnss_pci0/cnss_pci_iommu_group0": {},
+        "/soc/pinctrl@f000000": {
+          "compatible": "71636f6d2c73756e2d746c6d6d00",
+          "reg": "0f00000000202000",
+          "#gpio-cells": "00000002",
+          "#interrupt-cells": "00000002"
+        },
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_active": {},
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_en_sleep": {},
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_sw_ctrl": {},
+        "/soc/pinctrl@f000000/cnss_pins/cnss_wlan_sw_ctrl_wl_cx": {},
+        "/soc/pinctrl@f000000/cnss_wlan_sw_ctrl": {},
+        "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_default": {},
+        "/soc/pinctrl@f000000/pcie0/pcie0_clkreq_sleep": {},
+        "/soc/pinctrl@f000000/pcie0/pcie0_perst_default": {},
+        "/soc/pinctrl@f000000/pcie0/pcie0_wake_default": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_cts": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_cts": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rts": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_rx": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_default_tx": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rts": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_active": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_rx_wake": {},
+        "/soc/pinctrl@f000000/qupv3_se14_4uart_pins/qupv3_se14_tx": {},
+        "/soc/power-controller@c300000": {
+          "compatible": "71636f6d2c616f73732d716d7000",
+          "reg": "0c30000000000400",
+          "#clock-cells": "00000000"
+        },
+        "/soc/qcom,gdsc@16c000": {
+          "compatible": "71636f6d2c6764736300",
+          "reg": "0016c00000000004",
+          "regulator-name": "6763635f706369655f305f7068795f6764736300"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800": {
+          "compatible": "71636f6d2c706d3835353076652d6770696f00",
+          "reg": "00008800",
+          "#gpio-cells": "00000002",
+          "#interrupt-cells": "00000002"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800/bt_en": {},
+        "/soc/qcom,spmi@c42d000/qcom,pm8550ve@5/pinctrl@8800/bt_fmd_clk_en": {},
+        "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-chg-pon@9f": {
+          "reg": "0000009f00000001"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100": {
+          "compatible": "71636f6d2c73706d692d7364616d00",
+          "reg": "00007100"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-cnt2-stop@a2": {
+          "reg": "000000a200000001"
+        },
+        "/soc/qcom,spmi@c42d000/qcom,pmk8550@0/sdam@7100/fmd-set@9a": {
+          "reg": "0000009a00000001"
+        },
+        "/soc/rsc@16500000/drv@2/clock-controller": {
+          "compatible": "71636f6d2c73756e2d72706d682d636c6b00",
+          "#clock-cells": "00000001"
+        },
+        "/soc/rsc@16500000/drv@2/rpmh-regulator-ldof2/regulator-pm-vxf-l2": {
+          "regulator-name": "706d5f7638665f6c3200",
+          "regulator-min-microvolt": "00124f80",
+          "regulator-max-microvolt": "00124f80"
+        },
+        "/soc/rsc@16500000/drv@2/rpmh-regulator-ldof3/regulator-pm-vxf-l3": {
+          "regulator-name": "706d5f7638665f6c3300",
+          "regulator-min-microvolt": "001b7740",
+          "regulator-max-microvolt": "001b7740"
+        },
+        "/soc/rsc@16500000/drv@2/rpmh-regulator-ldok6/regulator-pmr-nalojr-l6": {
+          "regulator-name": "706d725f6e616c6f6a725f6c3600",
+          "regulator-min-microvolt": "001b1980",
+          "regulator-max-microvolt": "001c61a0"
+        },
+        "/soc/rsc@16500000/drv@2/rpmh-regulator-smpd1/regulator-pm-v8d-s1": {
+          "regulator-name": "706d5f7638645f733100",
+          "regulator-min-microvolt": "000d6d80",
+          "regulator-max-microvolt": "0010c8e0"
+        },
+        "/soc/rsc@16500000/drv@2/rpmh-regulator-smpd4/regulator-pm-v8d-s4": {
+          "regulator-name": "706d5f7638645f733400",
+          "regulator-min-microvolt": "0007a120",
+          "regulator-max-microvolt": "000fcee0"
+        },
+        "/soc/rsc@16500000/drv@2/rpmh-regulator-smpf5/regulator-pm-v8f-s5": {
+          "regulator-name": "706d5f7638665f733500",
+          "regulator-min-microvolt": "0007a120",
+          "regulator-max-microvolt": "000f4240"
+        },
+        "/soc/rsc@16500000/drv@2/rpmh-regulator-smpg3/regulator-pm-v8g-s3": {
+          "regulator-name": "706d5f7638675f733300",
+          "regulator-min-microvolt": "001c5200",
+          "regulator-max-microvolt": "001e8480"
+        },
+        "/soc/rsc@16500000/drv@2/rpmh-regulator-smpi7/regulator-pm-v8i-s7": {
+          "regulator-name": "706d5f7638695f733700",
+          "regulator-min-microvolt": "0012ad40",
+          "regulator-max-microvolt": "00147260"
+        }
+      },
+      "enabled_hs_uart_paths": [
+        "/soc/qcom,qupv3_2_geni_se@8c0000/qcom,qup_uart@898000"
+      ],
+      "serial_aliases": {
+        "serial0": "2f736f632f71636f6d2c71757076335f315f67656e695f7365406163303030302f71636f6d2c7175705f756172744061396330303000",
+        "hsuart0": "2f736f632f71636f6d2c71757076335f325f67656e695f7365403863303030302f71636f6d2c7175705f756172744038393830303000"
+      }
+    }
+  },
+  "bases": {
+    "sun-tp-v2": {
+      "profile": "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4",
+      "source_dtb_sha256": "e179216c7e96952783a0b987cbe98c7c947324e0a3ad3baa4f47ec4366a926f0",
+      "composed_sha256": "407976c0c8776431b8cec893d980b793134aa79e8448d5a79975880a02bac9d0"
+    },
+    "sun-tp": {
+      "profile": "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4",
+      "source_dtb_sha256": "f22152f269ae67b4e6ff1a23890087f14146cfbe3a1af1aa8ab0be51c3984b7a",
+      "composed_sha256": "ff21e197bac4fe14f1d07e2981c011588e4d3c6174c03b2ffb5873e4067deceb"
+    },
+    "sun-v2": {
+      "profile": "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4",
+      "source_dtb_sha256": "a0d3010d7e7c96ddb74f11f1571a7588210048ef8d2b33a498a920fbb1109575",
+      "composed_sha256": "208aa480b7297cb5c076291c95c98036b6fa61fb7bfb9f55b8a47affc4e1a024"
+    },
+    "sun": {
+      "profile": "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4",
+      "source_dtb_sha256": "d1bd2f120e3d6ddc222586d8bba155db3a4b8bfee3af00b2ad4356394504d50a",
+      "composed_sha256": "9b7d567201a1c8a90c64d4276263c51691d20ef202db9ea01f0884f1cff5cc40"
+    },
+    "sunp-tp-v2": {
+      "profile": "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4",
+      "source_dtb_sha256": "63873d6389ed685723eb5f2f5b56d3a5314ece622d7617d1e4d48c7a054c7729",
+      "composed_sha256": "f9c75356e558af11832a9f65a250dfc3c81f08339a0480e64f435a7ec6b6157f"
+    },
+    "sunp-tp": {
+      "profile": "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4",
+      "source_dtb_sha256": "df7883e6c9772d9970382141208ce263b2b3c2e02017a94ef8f0bae7538e6528",
+      "composed_sha256": "9d9e91d6ce460b9f35acbbe8ff4819f758315a7e289835c85f07dda3bbb42dae"
+    },
+    "sunp-v2": {
+      "profile": "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4",
+      "source_dtb_sha256": "0c99939573332011e09b847d1e294c1f85533c57107685ea7c17dc92f56ed25f",
+      "composed_sha256": "f768bbdda34b99eaaabe79b7ac676d8cdb48bb91e4bbabbef3b48da0b18372b3"
+    },
+    "sunp": {
+      "profile": "0c94873c87495697041b50621b5299970906fa0acd4146b06e5c84a0efdb65f4",
+      "source_dtb_sha256": "b9444ce20a07015f2cbc3c8f36b78c461c09a73319fc9809984b22633838e6b5",
+      "composed_sha256": "5c12f7d35ed708f54cec3d57a5ff0193798e32b9918a6160944a718f2530d998"
+    }
+  }
+}

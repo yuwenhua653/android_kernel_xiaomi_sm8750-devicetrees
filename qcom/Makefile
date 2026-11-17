@@ -456,3 +456,19 @@ dtbo-y += annibale-multimedia-$(ANNIBALE_MULTIMEDIA_REV)-test.dtbo
 always-y += annibale-multimedia-$(ANNIBALE_MULTIMEDIA_REV)-test.dtbo
 sun-overlays-dtb-y += annibale-multimedia-$(ANNIBALE_MULTIMEDIA_REV)-test.dtbo
 endif
+
+# Reviewed Annibale-only wireless wiring; does not change reference boards.
+ifneq ($(strip $(ANNIBALE_WIRELESS_MODE)),)
+ifneq ($(ANNIBALE_WIRELESS_MODE),native)
+$(error ANNIBALE_WIRELESS_MODE must be empty or native)
+endif
+ifneq ($(CONFIG_ARCH_SUN),y)
+$(error ANNIBALE_WIRELESS_MODE requires CONFIG_ARCH_SUN=y)
+endif
+ifeq ($(CONFIG_ARCH_QTI_VM),y)
+$(error ANNIBALE_WIRELESS_MODE is not supported in a trusted VM)
+endif
+dtbo-y += annibale-wireless-test.dtbo
+always-y += annibale-wireless-test.dtbo
+sun-overlays-dtb-y += annibale-wireless-test.dtbo
+endif

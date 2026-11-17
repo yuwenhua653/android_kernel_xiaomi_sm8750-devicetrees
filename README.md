@@ -2,6 +2,9 @@
 
 Redmi K90 (`annibale`) OSS 内核的 DTB/DTBO 源码工作仓库。
 
+当前进度：[R23 原厂 4.0.6 WLAN / 蓝牙板级接入](docs/annibale-wireless.md)。
+32 组设备树组合已通过静态校验，尚未完成 OSS 真机开机验证。
+
 - 来源：`LineageOS/android_kernel_qcom_sm8750-devicetrees`，`lineage-22.2`。
 - 初始提交：`450710a3aac3af54ef46504df2d46afecd6aa0eb`。
 - 开发分支：`annibale`。
