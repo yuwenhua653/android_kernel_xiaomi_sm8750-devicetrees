@@ -437,3 +437,22 @@ always-y        := $(dtb-y)
 subdir-y        := $(dts-dirs)
 subdir-y        += audio bt camera data display dsp eSE eva fingerprint graphics mm mmrm nfc synx video wlan
 clean-files     := *.dtb *.dtbo
+
+# Opt-in multimedia qualification; never add both SoC revisions implicitly.
+ifneq ($(strip $(ANNIBALE_MULTIMEDIA_REV)),)
+ifneq ($(words $(ANNIBALE_MULTIMEDIA_REV)),1)
+$(error select exactly one ANNIBALE_MULTIMEDIA_REV)
+endif
+ifeq ($(filter v1 v2,$(ANNIBALE_MULTIMEDIA_REV)),)
+$(error ANNIBALE_MULTIMEDIA_REV must be empty, v1 or v2)
+endif
+ifneq ($(CONFIG_ARCH_SUN),y)
+$(error ANNIBALE_MULTIMEDIA_REV requires CONFIG_ARCH_SUN=y)
+endif
+ifeq ($(CONFIG_ARCH_QTI_VM),y)
+$(error ANNIBALE_MULTIMEDIA_REV is not supported in a trusted VM)
+endif
+dtbo-y += annibale-multimedia-$(ANNIBALE_MULTIMEDIA_REV)-test.dtbo
+always-y += annibale-multimedia-$(ANNIBALE_MULTIMEDIA_REV)-test.dtbo
+sun-overlays-dtb-y += annibale-multimedia-$(ANNIBALE_MULTIMEDIA_REV)-test.dtbo
+endif

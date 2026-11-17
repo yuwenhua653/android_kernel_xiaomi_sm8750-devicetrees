@@ -1,0 +1,327 @@
+{
+  "round": "R22",
+  "target": "Redmi K90 / annibale / SM8750",
+  "scope": "Opt-in camera/video/EVA composition and Annibale media revision/selector preservation",
+  "kernel_commit": "c70ed7c690cc908451daf53c14afa8d3ceb20ca9",
+  "devicetrees_parent": "07ca2c7efb1ea46a252243bf092a578cd4cc9476",
+  "modules_parent": "1bcd87cbefca7d6c5f2473dbfcabfa466953dc8e",
+  "source_sha256": {
+    "qcom/Makefile": "dd8fc1817b5df68c3236b21bd11e28794dd1d0a0a029d0b1d7411d68b8af9f57",
+    "qcom/annibale-multimedia-v1-test.dts": "42a994d250a4388448ad0ba87db663f2a15e5916879d015f74fecb8235339b46",
+    "qcom/annibale-multimedia-v2-test.dts": "45859c5faf23f4b78b2e00d15a2bb16fc0b282aba52cf4c79bc605949e87ab6f",
+    "tools/validate_annibale_multimedia.py": "d3377cb25cd29583a378076df13c847194bd24eccb1f6ac4503340e4db33432b"
+  },
+  "status": "passed",
+  "compositions": 32,
+  "negative_checks": 128,
+  "kbuild_selector_checks": 8,
+  "validation_report_sha256": "3e694aec484eb65224dd5efb750d257a471559628134e34bc2733f3b646ab8fb",
+  "interactive_report_sha256": "c11771a82260bf66bd6c635d77dc104511923186464f4f5ffce0b74751d95710",
+  "cases": [
+    {
+      "base": "sun",
+      "family": "tfa",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "ea56e859872dc53fa8c3fc4dd46aca7ccea9cefb607f2326e5cea5aa3734aeb7"
+    },
+    {
+      "base": "sun",
+      "family": "tfa",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "57935e31c2246e5d89b7da44c249e03c00c72246f66905f3d91b07cb43fba0e7"
+    },
+    {
+      "base": "sun",
+      "family": "sia",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "90b9d5dd361bb7d2d2c8e3845da3c95c8445a805a32debd03165018683f12fcb"
+    },
+    {
+      "base": "sun",
+      "family": "sia",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "bcf8f4ed0768fe0a883847ad0f9189c66aa4e79d9d3795ddabab2ee6298e3abe"
+    },
+    {
+      "base": "sun-v2",
+      "family": "tfa",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "18ca224f9c9c93a5ed76dc88864e5629dd8dbadc48e133f9388448653e966757"
+    },
+    {
+      "base": "sun-v2",
+      "family": "tfa",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "5b080940d8caad63e2a405ab012e4d015dfed074879da0b28b6b973c52dfd0b6"
+    },
+    {
+      "base": "sun-v2",
+      "family": "sia",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "85207e2938f283f310b5e2b5cb284b53528b1126abfb614d93f0b67f3459056b"
+    },
+    {
+      "base": "sun-v2",
+      "family": "sia",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "e51fd65577d97c7b46373fb9db6506ac8e95c56abbee1579e92e4217f736af5c"
+    },
+    {
+      "base": "sun-tp",
+      "family": "tfa",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "5973910cc19e4abfd4b93d18d22caed02caa7f5cdf5f9b88053abfa9336b8502"
+    },
+    {
+      "base": "sun-tp",
+      "family": "tfa",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "4bc966655e1ef69f39eb088f3a90d5fae11ed2f7b1898b066d44bfb837b4c492"
+    },
+    {
+      "base": "sun-tp",
+      "family": "sia",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "c3b4907520a864722959507b31c446d9966b5b085b9baa1ed6aa71cbe2fa35d4"
+    },
+    {
+      "base": "sun-tp",
+      "family": "sia",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "b2457d057ea1a1b717ced84266f4abc7ac9b802c1f7e006ffc23409b87fa7d9d"
+    },
+    {
+      "base": "sun-tp-v2",
+      "family": "tfa",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "0b2f9b6549c8c1d16cc40fbd41deb04f8ae9048f72b1571941adb773df547dd0"
+    },
+    {
+      "base": "sun-tp-v2",
+      "family": "tfa",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "077f648254721dd09a963866fb066b33caa6cd131ee9546086a5f7bfb4497dfb"
+    },
+    {
+      "base": "sun-tp-v2",
+      "family": "sia",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "3404d0ddcc4a4620711f0f4727b4dfc541ee317740d74e11c25dbcd87658e954"
+    },
+    {
+      "base": "sun-tp-v2",
+      "family": "sia",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "087cf3783fbc193355690ddfc5224ae87a60927d1a1c032768468f4890c83613"
+    },
+    {
+      "base": "sunp",
+      "family": "tfa",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "32bb22be01b61ede93584b9f30cb855fa890045509ef65d566dfafb267dacce2"
+    },
+    {
+      "base": "sunp",
+      "family": "tfa",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "86a3f4f9a7cf53231612f6ffed8607dad4af0c049a40202ed9dae159fee46678"
+    },
+    {
+      "base": "sunp",
+      "family": "sia",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "ffcf52bd9aa1793719b029e6a1b5a203e106f6f4c51bac3e7aca5609bf3283e8"
+    },
+    {
+      "base": "sunp",
+      "family": "sia",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "efd22b8a79245da0b551a1003f6cee124a993c316e10182a41b374931a40ed45"
+    },
+    {
+      "base": "sunp-v2",
+      "family": "tfa",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "18ca224f9c9c93a5ed76dc88864e5629dd8dbadc48e133f9388448653e966757"
+    },
+    {
+      "base": "sunp-v2",
+      "family": "tfa",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "5b080940d8caad63e2a405ab012e4d015dfed074879da0b28b6b973c52dfd0b6"
+    },
+    {
+      "base": "sunp-v2",
+      "family": "sia",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "85207e2938f283f310b5e2b5cb284b53528b1126abfb614d93f0b67f3459056b"
+    },
+    {
+      "base": "sunp-v2",
+      "family": "sia",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "e51fd65577d97c7b46373fb9db6506ac8e95c56abbee1579e92e4217f736af5c"
+    },
+    {
+      "base": "sunp-tp",
+      "family": "tfa",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "fb9740ecb8402aebf7a6448001b6add9698d50550f7fa68be5d3914ba9e0b480"
+    },
+    {
+      "base": "sunp-tp",
+      "family": "tfa",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "ce4fa8e6a323c21dace5a71cdec72e712de4be47649e748c0a2828b7e997186c"
+    },
+    {
+      "base": "sunp-tp",
+      "family": "sia",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "82da0799e5fe2d2ba0525e61a3c2009f45bab85d3eed1e6ce7a3a799b04c0c30"
+    },
+    {
+      "base": "sunp-tp",
+      "family": "sia",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v1",
+      "sha256": "8cb6c31b20c83aff04b519a417269886e514fc600780126a92d761b7589ab3f7"
+    },
+    {
+      "base": "sunp-tp-v2",
+      "family": "tfa",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "ccd15b5a25dc6195f27bd3b8ad75ad39d234f412aad21aea115f47d05fdbcf31"
+    },
+    {
+      "base": "sunp-tp-v2",
+      "family": "tfa",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "51e2d71153f9f3edf53c8e36895a62f87b7fc5f8c462008aefa4a653b5aaed2f"
+    },
+    {
+      "base": "sunp-tp-v2",
+      "family": "sia",
+      "display_mode": "default",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "5fb951887e4af336558f771e6625e00bf295cde15c2a0580a8283698ca60fb48"
+    },
+    {
+      "base": "sunp-tp-v2",
+      "family": "sia",
+      "display_mode": "native",
+      "video_node": "/soc/qcom,vidc@aa00000",
+      "eva_node": "/soc/qcom,cvp@ab00000",
+      "revision": "v2",
+      "sha256": "857603a89dee245ad77d50d824f9dea94bbd4a55c78ba36ee9558df938f8e204"
+    }
+  ],
+  "wireless_gap": {
+    "slim_msm_disabled_compositions": 32,
+    "status": "Module selection does not enable the disabled SLIM DT controller. Final Bluetooth/WLAN power/pinctrl/transport wiring remains unqualified."
+  },
+  "dtc_warning_counts": {
+    "annibale-multimedia-v2-test.warnings": 15,
+    "annibale-multimedia-v1-test.warnings": 15
+  },
+  "flashable": false,
+  "boot_verified": false,
+  "hardware_verified": false,
+  "unverified": [
+    "Complete DT schema and electrical/GPIO conflicts",
+    "Bootloader DTBO packaging and selection on real device",
+    "HAL/firmware behavior and multimedia runtime",
+    "Final WLAN/Bluetooth DT composition"
+  ]
+}
